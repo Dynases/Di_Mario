@@ -53,9 +53,7 @@ Partial Class F1_Zonas
         Me.grZona = New Janus.Windows.GridEX.GridEX()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.AxButtonBar1 = New AxMSExchangeLib.AxButtonBar()
-        Me.AxButtonBar1 = New AxMSExchangeLib.AxButtonBar()
-        Me.AxButtonBar2 = New AxMSExchangeLib.AxButtonBar()
+
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelRegistro.SuspendLayout()
@@ -83,9 +81,7 @@ Partial Class F1_Zonas
         Me.PanelTable.SuspendLayout()
         CType(Me.grZona, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.AxButtonBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AxButtonBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AxButtonBar2, System.ComponentModel.ISupportInitialize).BeginInit()
+
         Me.SuspendLayout()
         '
         'SuperTabPrincipal
@@ -759,26 +755,7 @@ Partial Class F1_Zonas
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1326, 566)
         Me.TableLayoutPanel1.TabIndex = 22
         '
-        'AxButtonBar1
-        '
-        Me.AxButtonBar1.Enabled = True
-        Me.AxButtonBar1.Location = New System.Drawing.Point(0, 0)
-        Me.AxButtonBar1.Name = "AxButtonBar1"
-        Me.AxButtonBar1.TabIndex = 0
-        '
-        'AxButtonBar1
-        '
-        Me.AxButtonBar1.Enabled = True
-        Me.AxButtonBar1.Location = New System.Drawing.Point(0, 0)
-        Me.AxButtonBar1.Name = "AxButtonBar1"
-        Me.AxButtonBar1.TabIndex = 0
-        '
-        'AxButtonBar2
-        '
-        Me.AxButtonBar2.Enabled = True
-        Me.AxButtonBar2.Location = New System.Drawing.Point(0, 0)
-        Me.AxButtonBar2.Name = "AxButtonBar2"
-        Me.AxButtonBar2.TabIndex = 0
+
         '
         'F1_Zonas
         '
@@ -820,9 +797,7 @@ Partial Class F1_Zonas
         Me.PanelTable.ResumeLayout(False)
         CType(Me.grZona, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.AxButtonBar1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AxButtonBar1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AxButtonBar2, System.ComponentModel.ISupportInitialize).EndInit()
+
         Me.ResumeLayout(False)
 
     End Sub
@@ -853,6 +828,5 @@ Partial Class F1_Zonas
     Friend WithEvents ButtonX3 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents btLimpiar As DevComponents.DotNetBar.ButtonX
     Friend WithEvents ColorDialog1 As System.Windows.Forms.ColorDialog
-    Private WithEvents AxButtonBar1 As AxMSExchangeLib.AxButtonBar
-    Private WithEvents AxButtonBar2 As AxMSExchangeLib.AxButtonBar
+
 End Class

@@ -104,7 +104,7 @@ Public Class F0_PagosCredito
         '     a.tenumi ,a.tefdoc ,a.tety4vend,vendedor .yddesc as vendedor,
         'a.teobs ,a.tefact ,a.tehact ,a.teuact  ,Sum(detalle .tdmonto) as total 
         With grcobranza.RootTable.Columns("tenumi")
-            .Width = 120
+            .Width = 140
             .Visible = True
             .TextAlignment = TextAlignment.Far
             .Caption = "Cod Cobranzas"
@@ -112,7 +112,7 @@ Public Class F0_PagosCredito
         With grcobranza.RootTable.Columns("tefdoc")
             .Width = 120
             .Visible = True
-            .Caption = "FECHA"
+            .Caption = "Fecha"
             .FormatString = "dd/MM/yyyy"
         End With
         With grcobranza.RootTable.Columns("tety4vend")
@@ -133,6 +133,7 @@ Public Class F0_PagosCredito
         With grcobranza.RootTable.Columns("total")
             .Caption = "Total"
             .Width = 100
+            .FormatString = "0.00"
             .TextAlignment = TextAlignment.Far
             .Visible = True
         End With
@@ -154,10 +155,11 @@ Public Class F0_PagosCredito
             .GroupByBoxVisible = False
             'diseño de la grilla
             .VisualStyle = VisualStyle.Office2007
+            .DefaultFilterRowComparison = FilterConditionOperator.BeginsWith
+            .FilterMode = FilterMode.Automatic
             .FilterRowUpdateMode = FilterRowUpdateMode.WhenValueChanges
             'Diseño de la tabla
             .VisualStyle = VisualStyle.Office2007
-
         End With
     End Sub
 

@@ -162,6 +162,7 @@ Public Class F0_Cobrar_Vendedor
     End Sub
 
     Private Sub _Limpiar()
+
         tbCodigo.Clear()
         tbFechaVenta.Value = Now.Date
         tbNombre.Clear()
@@ -603,6 +604,7 @@ Public Class F0_Cobrar_Vendedor
 
 
             _Limpiar()
+
 
         Else
             Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)

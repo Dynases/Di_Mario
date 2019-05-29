@@ -2202,6 +2202,7 @@ salirIf:
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         If (grVentas.RowCount > 0) Then
+
             If (gb_FacturaEmite) Then
                 If (Not P_fnValidarFacturaVigente()) Then
                     Dim img As Bitmap = New Bitmap(My.Resources.WARNING, 50, 50)

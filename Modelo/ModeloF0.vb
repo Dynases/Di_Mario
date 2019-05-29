@@ -1,6 +1,16 @@
 ﻿Imports Modelo.MGlobal
 Public Class ModeloF0
-
+#Region "METODO PARPADEO"
+    '''Evita el parpadeo de las ventanas'''
+    Protected Overrides ReadOnly Property CreateParams() As CreateParams
+        Get
+            Dim cp As CreateParams = MyBase.CreateParams
+            cp.ExStyle = cp.ExStyle Or &H2000000
+            cp.Style = cp.Style And Not &H2000000
+            Return cp
+        End Get
+    End Property
+#End Region
 
     Private Sub ModeloHor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
 

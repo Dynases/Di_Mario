@@ -57,6 +57,7 @@ Public Class P_Principal
         ''  ct.PanelBackColor = Color.FromArgb(49, 59, 66)
     End Sub
 
+
     Private Sub _prLeerArchivoConfig()
         Dim Archivo() As String = IO.File.ReadAllLines(Application.StartupPath + "\CONFIG.TXT")
         gs_Ip = Archivo(0).Split("=")(1).Trim
@@ -215,6 +216,7 @@ Public Class P_Principal
     Private Sub P_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _prIniciarTodo()
     End Sub
+
     Private Sub P_Principal_MouseClick(sender As Object, e As MouseEventArgs) Handles MyBase.MouseClick
         _prLogin()
     End Sub

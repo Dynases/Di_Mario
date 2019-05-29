@@ -585,8 +585,6 @@ Public Class F1_Productos
         _prIniciarTodo()
     End Sub
 
-
-
     Private Function _fnCopiarImagenRutaDefinida() As String
         'copio la imagen en la carpeta del sistema
 

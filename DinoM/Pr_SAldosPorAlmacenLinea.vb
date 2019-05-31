@@ -109,10 +109,8 @@ Public Class Pr_SAldosPorAlmacenLinea
 
             Dim objrep As New R_SaldosPorLinea
             objrep.SetDataSource(_dt)
-
             objrep.SetParameterValue("usuario", L_Usuario)
             MReportViewer.ReportSource = objrep
-            MReportViewer.Show()
             MReportViewer.BringToFront()
 
 

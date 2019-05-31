@@ -327,6 +327,11 @@ Public Class F0_Ventas
 
         _MostrarCalcularPorcentaje()
         _prCalcularPrecioTotal()
+        If (swTipoVenta.Value = True) Then
+            btnModificar.Enabled = False
+        Else
+            btnModificar.Enabled = True
+        End If
         LblPaginacion.Text = Str(grVentas.Row + 1) + "/" + grVentas.RowCount.ToString
 
     End Sub
@@ -2136,7 +2141,7 @@ salirIf:
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbtotdesc") = 0
                         Dim img As Bitmap = New Bitmap(My.Resources.mensaje, 50, 50)
                         ToastNotification.Show(Me, "La cantidad de la venta no debe ser mayor al del stock" & vbCrLf &
-                        "Stock=" + Str(stock).ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+                        "Stock=" + Str(stock).ToUpper, img, 4000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                         grdetalle.SetValue("tbcmin", 0)
                         grdetalle.SetValue("tbptot", grdetalle.GetValue("tbpbas"))
                         grdetalle.SetValue("tbptot2", grdetalle.GetValue("tbpcos") * 1)

@@ -159,6 +159,42 @@ Public Class F0_Ventas
         cbSucursal.ReadOnly = True
         FilaSelectLote = Nothing
     End Sub
+    Private Sub _prInhabiliitarModElim()
+        tbnrodoc.ReadOnly = True
+        SwProforma.IsReadOnly = True
+        cbSucursal.ReadOnly = True
+
+        tbcodigovendedor.Enabled = False
+        tbvendedores.ReadOnly = True
+        tbnrocod.Enabled = False
+        tbCliente.ReadOnly = True
+        tbObservacion.ReadOnly = True
+        tbFechaVenta.Enabled = False
+        swMoneda.IsReadOnly = True
+        tbFechaVenc.Enabled = False
+        swTipoVenta.IsReadOnly = True
+
+        tbCodigo.ReadOnly = True
+
+        tbSubTotal.IsInputReadOnly = True
+        tbIce.IsInputReadOnly = True
+        tbtotal.IsInputReadOnly = True
+        tbPdesc.IsInputReadOnly = True
+        tbMdesc.IsInputReadOnly = True
+
+        btnModificar.Enabled = True
+        btnGrabar.Enabled = False
+        btnNuevo.Enabled = True
+        btnEliminar.Enabled = True
+
+        grVentas.Enabled = True
+        PanelNavegacion.Enabled = True
+        grdetalle.RootTable.Columns("img").Visible = False
+
+
+
+        FilaSelectLote = Nothing
+    End Sub
     Private Sub _prhabilitar()
         SwProforma.IsReadOnly = False
         grVentas.Enabled = False
@@ -329,6 +365,7 @@ Public Class F0_Ventas
         _prCalcularPrecioTotal()
         If (swTipoVenta.Value = True) Then
             btnModificar.Enabled = False
+            'btnEliminar.Enabled = False
         Else
             btnModificar.Enabled = True
         End If
@@ -2219,8 +2256,6 @@ salirIf:
                     Exit Sub
                 End If
             End If
-
-            _prhabilitar()
             btnNuevo.Enabled = False
             btnModificar.Enabled = False
             btnEliminar.Enabled = False
@@ -2228,8 +2263,18 @@ salirIf:
 
             PanelNavegacion.Enabled = False
             _prCargarIconELiminar()
+
+            Dim res As Boolean = L_VerificarPago(tbCodigo.Text)
+            If res Then
+                Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
+                ToastNotification.Show(Me, "La Venta no puede ser MODIFICADA porque ya tiene pagos".ToUpper, img, 5000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+                _prInhabiliitarModElim()
+
+            End If
         End If
     End Sub
+
+
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
         If (gb_FacturaEmite) Then
@@ -2243,34 +2288,38 @@ salirIf:
                 Exit Sub
             End If
         End If
+        Dim est As Boolean = L_VerificarPago(tbCodigo.Text)
+        If est Then
+            Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
+            ToastNotification.Show(Me, "La Venta no puede ser ELIMINADA porque ya tiene pagos".ToUpper, img, 5000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+            _prInhabiliitarModElim()
 
-        Dim ef = New Efecto
+        Else
+            Dim ef = New Efecto
+            ef.tipo = 2
+            ef.Context = "¿esta seguro de eliminar el registro?".ToUpper
+            ef.Header = "mensaje principal".ToUpper
+            ef.ShowDialog()
+            Dim bandera As Boolean = False
+            bandera = ef.band
+            If (bandera = True) Then
+                Dim mensajeError As String = ""
+                Dim res As Boolean = L_fnEliminarVenta(tbCodigo.Text, mensajeError)
+                If res Then
 
 
-        ef.tipo = 2
-        ef.Context = "¿esta seguro de eliminar el registro?".ToUpper
-        ef.Header = "mensaje principal".ToUpper
-        ef.ShowDialog()
-        Dim bandera As Boolean = False
-        bandera = ef.band
-        If (bandera = True) Then
-            Dim mensajeError As String = ""
-            Dim res As Boolean = L_fnEliminarVenta(tbCodigo.Text, mensajeError)
-            If res Then
+                    Dim img As Bitmap = New Bitmap(My.Resources.checked, 50, 50)
 
+                    ToastNotification.Show(Me, "Código de Venta ".ToUpper + tbCodigo.Text + " eliminado con Exito.".ToUpper,
+                                              img, 2000,
+                                              eToastGlowColor.Green,
+                                              eToastPosition.TopCenter)
 
-                Dim img As Bitmap = New Bitmap(My.Resources.checked, 50, 50)
-
-                ToastNotification.Show(Me, "Código de Venta ".ToUpper + tbCodigo.Text + " eliminado con Exito.".ToUpper,
-                                          img, 2000,
-                                          eToastGlowColor.Green,
-                                          eToastPosition.TopCenter)
-
-                _prFiltrar()
-
-            Else
-                Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
-                ToastNotification.Show(Me, mensajeError, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+                    _prFiltrar()
+                Else
+                    Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
+                    ToastNotification.Show(Me, mensajeError, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+                End If
             End If
         End If
 

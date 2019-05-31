@@ -1503,6 +1503,25 @@ Public Class AccesoLogica
 
         Return _resultado
     End Function
+    Public Shared Function L_VerificarPago(ByRef _tanumi As String) As Boolean
+        Dim _Tabla As DataTable
+        Dim _resultado As Boolean
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 20))
+        _listParam.Add(New Datos.DParametro("@tanumi", _tanumi))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV001", _listParam)
+
+
+        If _Tabla.Rows.Count > 0 Then
+            _resultado = True
+        Else
+            _resultado = False
+        End If
+
+        Return _resultado
+    End Function
+
 
     Public Shared Function L_fnModificarVenta(_tanumi As String, _tafdoc As String, _taven As Integer, _tatven As Integer, _tafvcr As String, _taclpr As Integer,
                                            _tamon As Integer, _taobs As String,

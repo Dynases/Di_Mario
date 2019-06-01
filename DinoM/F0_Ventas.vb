@@ -32,6 +32,8 @@ Public Class F0_Ventas
     Dim FilaSelectLote As DataRow = Nothing
     Dim Table_Producto As DataTable
     Dim DatosCargados As Boolean = False
+    Dim banderaStock As Boolean = False
+
     Dim Lote As Boolean = False '1=igual a mostrar las columnas de lote y fecha de Vencimiento
 #End Region
 
@@ -788,15 +790,20 @@ Public Class F0_Ventas
             If (Not IsNothing(frmAyuda.filaSelect)) Then
                 Dim Row As Janus.Windows.GridEX.GridEXRow
                 Row = frmAyuda.filaSelect
-                Dim pos As Integer = -1
-                grdetalle.Row = grdetalle.RowCount - 1
-                _fnObtenerFilaDetalle(pos, grdetalle.GetValue("tbnumi"))
+
                 Dim numiProd = Row.Cells("yfnumi").Value
                 'Dim lote As String = Row.Cells("iclot").Value
                 'Dim FechaVenc As Date = Row.Cells("icfven").Value
                 If (Not _fnExisteProductoConLote(numiProd, "20170101", CDate("2017/01/01"))) Then
 
                     If (Row.Cells("stock").Value > 0) Then
+                        If (grdetalle.Row <> 0 Or grdetalle.GetValue("tbty5prod") > 0) Then
+                            _prAddDetalleVenta()
+                        End If
+
+                        Dim pos As Integer = -1
+                        grdetalle.Row = grdetalle.RowCount - 1
+                        _fnObtenerFilaDetalle(pos, grdetalle.GetValue("tbnumi"))
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbty5prod") = Row.Cells("yfnumi").Value
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("codigo") = Row.Cells("yfcprod").Value
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("producto") = Row.Cells("yfcdprod1").Value
@@ -1783,9 +1790,15 @@ Public Class F0_Ventas
     End Sub
     Private Sub grdetalle_KeyDown(sender As Object, e As KeyEventArgs) Handles grdetalle.KeyDown
         If (Not _fnAccesible()) Then
+
             Return
         End If
         If (e.KeyData = Keys.Enter) Then
+            If (banderaStock = True) Then
+                banderaStock = False
+                Return
+
+            End If
             Dim f, c As Integer
             c = grdetalle.Col
             f = grdetalle.Row
@@ -1798,7 +1811,7 @@ Public Class F0_Ventas
                         ToastNotification.Show(Me, "Ya ha Sobrepasado la Cantidad Maxima de Venta que es =10".ToUpper, img2, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                         Return
                     Else
-                        _prAddDetalleVenta()
+
                         _HabilitarProductos()
                     End If
 
@@ -1813,7 +1826,7 @@ Public Class F0_Ventas
                     ToastNotification.Show(Me, "Ya ha Sobrepasado la Cantidad Maxima de Venta que es =10".ToUpper, img2, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                     Return
                 Else
-                    _prAddDetalleVenta()
+
                     _HabilitarProductos()
                 End If
 
@@ -2178,7 +2191,7 @@ salirIf:
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbtotdesc") = 0
                         Dim img As Bitmap = New Bitmap(My.Resources.mensaje, 50, 50)
                         ToastNotification.Show(Me, "La cantidad de la venta no debe ser mayor al del stock" & vbCrLf &
-                        "Stock=" + Str(stock).ToUpper, img, 4000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+                        "Stock=" + Str(stock).ToUpper, img, 5000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                         grdetalle.SetValue("tbcmin", 0)
                         grdetalle.SetValue("tbptot", grdetalle.GetValue("tbpbas"))
                         grdetalle.SetValue("tbptot2", grdetalle.GetValue("tbpcos") * 1)
@@ -2186,7 +2199,7 @@ salirIf:
 
                         _prCalcularPrecioTotal()
                         _DesHabilitarProductos()
-
+                        banderaStock = True
                     Else
                         If (cant = stock) Then
 

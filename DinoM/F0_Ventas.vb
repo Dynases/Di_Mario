@@ -1462,10 +1462,10 @@ Public Class F0_Ventas
         If (Lote = True) Then
 
             Dim dt4 As DataTable = L_fnVentaNotaDeVenta(numi)
-            Dim objrep As New R_ProformaCompleta
+            Dim objrep As New R_ProformaCompleta___Copia
             If PrintDialog1.ShowDialog = DialogResult.OK Then
 
-                objrep.Subreports.Item("R_ProformaPreImpresa.rpt").SetDataSource(dt4)
+                'objrep.Subreports.Item("R_ProformaPreImpresa.rpt").SetDataSource(dt4)
                 objrep.SetDataSource(dt4)
                 objrep.PrintOptions.PrinterName = PrintDialog1.PrinterSettings.PrinterName
                 objrep.PrintToPrinter(1, False, 1, 10)
@@ -1489,13 +1489,13 @@ Public Class F0_Ventas
         Else
 
             Dim dt4 As DataTable = L_fnVentaNotaDeVenta(numi)
-            Dim objrep As New R_ProformaCompleta
+            Dim objrep As New R_ProformaCompleta___Copia
             If PrintDialog1.ShowDialog = DialogResult.OK Then
 
-                objrep.Subreports.Item("R_ProformaPreImpresa.rpt").SetDataSource(dt4)
+                'objrep.Subreports.Item("R_ProformaPreImpresa.rpt").SetDataSource(dt4)
                 objrep.SetDataSource(dt4)
                 objrep.PrintOptions.PrinterName = PrintDialog1.PrinterSettings.PrinterName
-                objrep.PrintToPrinter(1, False, 1, 1)
+                objrep.PrintToPrinter(1, False, 1, 10)
             End If
 
             'objrep.Subreports.Item("R_ProformaPreImpresa-01.rpt").SetDataSource(dt4)
@@ -1793,9 +1793,11 @@ Public Class F0_Ventas
 
             Return
         End If
+
         If (e.KeyData = Keys.Enter) Then
-            If (banderaStock = True) Then
-                banderaStock = False
+            Dim cant As Integer = grdetalle.GetValue("tbcmin")
+            Dim stock As Integer = grdetalle.GetValue("stock")
+            If (cant > stock) Then
                 Return
 
             End If
@@ -1811,7 +1813,6 @@ Public Class F0_Ventas
                         ToastNotification.Show(Me, "Ya ha Sobrepasado la Cantidad Maxima de Venta que es =10".ToUpper, img2, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                         Return
                     Else
-
                         _HabilitarProductos()
                     End If
 
@@ -2184,6 +2185,7 @@ salirIf:
                     If (cant > stock) Then
                         Dim lin As Integer = grdetalle.GetValue("tbnumi")
                         Dim pos As Integer = -1
+
                         _fnObtenerFilaDetalle(pos, lin)
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbcmin") = 0
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbptot") = CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbpbas")
@@ -2191,7 +2193,7 @@ salirIf:
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbtotdesc") = 0
                         Dim img As Bitmap = New Bitmap(My.Resources.mensaje, 50, 50)
                         ToastNotification.Show(Me, "La cantidad de la venta no debe ser mayor al del stock" & vbCrLf &
-                        "Stock=" + Str(stock).ToUpper, img, 5000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+                        "Stock=" + Str(stock).ToUpper, img, 6000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                         grdetalle.SetValue("tbcmin", 0)
                         grdetalle.SetValue("tbptot", grdetalle.GetValue("tbpbas"))
                         grdetalle.SetValue("tbptot2", grdetalle.GetValue("tbpcos") * 1)

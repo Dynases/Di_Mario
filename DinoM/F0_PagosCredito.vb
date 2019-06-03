@@ -109,10 +109,16 @@ Public Class F0_PagosCredito
             .TextAlignment = TextAlignment.Far
             .Caption = "Cod Cobranzas"
         End With
+        With grcobranza.RootTable.Columns("tdnrodoc")
+            .Caption = "Nro Doc"
+            .Width = 90
+            .TextAlignment = TextAlignment.Far
+            .Visible = True
+        End With
         With grcobranza.RootTable.Columns("tefdoc")
             .Width = 120
             .Visible = True
-            .Caption = "Fecha"
+            .Caption = "Fecha Pago"
             .FormatString = "dd/MM/yyyy"
         End With
         With grcobranza.RootTable.Columns("tety4vend")
@@ -121,7 +127,7 @@ Public Class F0_PagosCredito
             .Visible = False
         End With
         With grcobranza.RootTable.Columns("vendedor")
-            .Caption = "Cobrador"
+            .Caption = "Vendedor"
             .Width = 300
             .Visible = True
         End With
@@ -1137,7 +1143,6 @@ Public Class F0_PagosCredito
 
     Private Sub grcobranza_SelectionChanged(sender As Object, e As EventArgs) Handles grcobranza.SelectionChanged
         If (grcobranza.RowCount >= 0 And grcobranza.Row >= 0) Then
-
             _prMostrarRegistro(grcobranza.Row)
         End If
     End Sub
@@ -1219,9 +1224,7 @@ Public Class F0_PagosCredito
     End Sub
 
     Private Sub grcobranza_DoubleClick(sender As Object, e As EventArgs) Handles grcobranza.DoubleClick
-
         MSuperTabControl.SelectedTabIndex = 0
-
     End Sub
 
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click

@@ -37,7 +37,6 @@ Public Class F1_Productos
         Dim blah As New Bitmap(New Bitmap(My.Resources.producto), 20, 20)
         Dim ico As Icon = Icon.FromHandle(blah.GetHicon())
         Me.Icon = ico
-
     End Sub
     Public Sub _prStyleJanus()
         GroupPanelBuscador.Style.BackColor = Color.FromArgb(13, 71, 161)

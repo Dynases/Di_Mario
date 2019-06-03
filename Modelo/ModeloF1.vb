@@ -268,14 +268,14 @@ Public Class ModeloF1
 #Region "METODOS OVERRIDABLES"
 
     '''Evita el parpadeo de las ventanas'''
-    Protected Overrides ReadOnly Property CreateParams As CreateParams
-        Get
-            Dim cp As CreateParams = MyBase.CreateParams
-            cp.ExStyle = cp.ExStyle Or &H2000000
-            cp.Style = cp.Style And Not &H2000000
-            Return cp
-        End Get
-    End Property
+    'Protected Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim cp As CreateParams = MyBase.CreateParams
+    '        cp.ExStyle = cp.ExStyle Or &H2000000
+    '        cp.Style = cp.Style And Not &H2000000
+    '        Return cp
+    '    End Get
+    'End Property
 
 
 
@@ -407,6 +407,8 @@ Public Class ModeloF1
     Private Sub btnUltimo_Click(sender As Object, e As EventArgs) Handles btnUltimo.Click
         _PMUltimoRegistro()
     End Sub
+
+
 
 
 #End Region

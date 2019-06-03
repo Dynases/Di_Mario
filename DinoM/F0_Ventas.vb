@@ -63,6 +63,7 @@ Public Class F0_Ventas
         btnNuevo.PerformClick()
 
     End Sub
+
     Public Sub _prCargarNameLabel()
         Dim dt As DataTable = L_fnNameLabel()
         If (dt.Rows.Count > 0) Then
@@ -79,6 +80,8 @@ Public Class F0_Ventas
         'End If
 
     End Sub
+    ''Valida parpadeo
+
     Public Sub _prValidarLote()
         Dim dt As DataTable = L_fnPorcUtilidad()
         If (dt.Rows.Count > 0) Then
@@ -2342,11 +2345,8 @@ salirIf:
 
     Private Sub grVentas_SelectionChanged(sender As Object, e As EventArgs) Handles grVentas.SelectionChanged
         If (grVentas.RowCount >= 0 And grVentas.Row >= 0) Then
-
             _prMostrarRegistro(grVentas.Row)
         End If
-
-
     End Sub
 
     Private Sub btnSiguiente_Click(sender As Object, e As EventArgs) Handles btnSiguiente.Click
@@ -2742,7 +2742,6 @@ salirIf:
     Private Sub tbSubTotal_ValueChanged(sender As Object, e As EventArgs) Handles tbSubTotal.ValueChanged
 
     End Sub
-
 
 
 #End Region

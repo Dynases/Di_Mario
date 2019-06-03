@@ -697,6 +697,7 @@ Partial Class ModeloF1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(853, 507)
         Me.Controls.Add(Me.SuperTabPrincipal)
+        Me.DoubleBuffered = True
         Me.KeyPreview = True
         Me.Name = "ModeloF1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

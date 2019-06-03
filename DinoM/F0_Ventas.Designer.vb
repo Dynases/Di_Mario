@@ -204,7 +204,6 @@ Partial Class F0_Ventas
         '
         'btnEliminar
         '
-        Me.btnEliminar.Text = "ELIMINAR"
         '
         'btnModificar
         '
@@ -231,7 +230,6 @@ Partial Class F0_Ventas
         '
         'btnUltimo
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2)
         '
         'btnSiguiente
@@ -1471,6 +1469,7 @@ Partial Class F0_Ventas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1016, 609)
+        Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F0_Ventas"
         Me.Text = "F0_Ventas"

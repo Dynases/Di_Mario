@@ -267,16 +267,15 @@ Public Class ModeloF1
 
 #Region "METODOS OVERRIDABLES"
 
-    '''Evita el parpadeo de las ventanas'''
-    'Protected Overrides ReadOnly Property CreateParams() As CreateParams
-    '    Get
-    '        Dim cp As CreateParams = MyBase.CreateParams
-    '        cp.ExStyle = cp.ExStyle Or &H2000000
-    '        cp.Style = cp.Style And Not &H2000000
-    '        Return cp
-    '    End Get
-    'End Property
-
+    ''Evita el parpadeo de las ventanas''
+    Protected Overrides ReadOnly Property CreateParams() As CreateParams
+        Get
+            Dim cp As CreateParams = MyBase.CreateParams
+            cp.ExStyle = cp.ExStyle Or &H2000000
+            cp.Style = cp.Style And Not &H2000000
+            Return cp
+        End Get
+    End Property
 
 
     Public Overridable Sub _PMOMostrarRegistro(_N As Integer)

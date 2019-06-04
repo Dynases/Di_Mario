@@ -1471,7 +1471,7 @@ Public Class F0_Ventas
                 'objrep.Subreports.Item("R_ProformaPreImpresa.rpt").SetDataSource(dt4)
                 objrep.SetDataSource(dt4)
                 objrep.PrintOptions.PrinterName = PrintDialog1.PrinterSettings.PrinterName
-                objrep.PrintToPrinter(1, False, 1, 10)
+                objrep.PrintToPrinter(1, False, 1, 1)
             End If
 
 
@@ -1498,7 +1498,7 @@ Public Class F0_Ventas
                 'objrep.Subreports.Item("R_ProformaPreImpresa.rpt").SetDataSource(dt4)
                 objrep.SetDataSource(dt4)
                 objrep.PrintOptions.PrinterName = PrintDialog1.PrinterSettings.PrinterName
-                objrep.PrintToPrinter(1, False, 1, 10)
+                objrep.PrintToPrinter(1, False, 1, 1)
             End If
 
             'objrep.Subreports.Item("R_ProformaPreImpresa-01.rpt").SetDataSource(dt4)

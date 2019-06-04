@@ -1,5 +1,6 @@
 ﻿Imports Logica.AccesoLogica
 Imports Janus.Windows.GridEX.EditControls
+Imports System.Runtime.CompilerServices
 
 Module P_Global
 
@@ -159,6 +160,11 @@ Module P_Global
     Public gb_FacturaIncluirICE As Boolean = False 'Incluir en Importe ICE / IEHD / TASAS?, true=Si se incluye, false=No se incluye
 
 #End Region
+
+
+
+
+
 
 
 End Module

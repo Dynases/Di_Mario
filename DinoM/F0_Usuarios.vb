@@ -483,8 +483,7 @@ Public Class F0_Usuarios
             _PFiltrar()
             _PCargarBuscador()
         Else
-            _modulo.Select()
-            _tab.Close()
+            Me.Close()
 
         End If
     End Sub

@@ -900,11 +900,10 @@ Public Class F1_Productos
                 _PMUltimoRegistro()
 
             Else
-                '  Public _modulo As SideNavItem
-                _tab.Close()
-                _modulo.Select()
+            '  Public _modulo As SideNavItem
+            Me.Close()
 
-            End If
+        End If
         End Sub
 
         Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click

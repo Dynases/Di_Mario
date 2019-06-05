@@ -819,9 +819,7 @@ Public Class F0_MCompras
 
             End If
         Else
-            _tab.Close()
-            '  Public _modulo As SideNavItem
-            _modulo.Select()
+            Me.Close()
 
 
         End If

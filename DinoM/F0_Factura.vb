@@ -1201,8 +1201,7 @@ Public Class F0_Factura
             End If
         Else
 
-            _modulo.Select()
-            _tab.Close()
+            Me.Close()
         End If
     End Sub
     Public Sub _prCargarIconELiminar()

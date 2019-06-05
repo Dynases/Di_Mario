@@ -1269,8 +1269,8 @@ Public Class F0_Ventas
 
             End If
         Else
-            _tab.Close()
-            _modulo.Select()
+            Me.Close()
+
 
         End If
     End Sub

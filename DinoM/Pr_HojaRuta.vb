@@ -190,8 +190,7 @@ Public Class Pr_HojaRuta
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
 
         '  Public _modulo As SideNavItem
-        _tab.Close()
-        _modulo.Select()
+        Me.Close()
 
     End Sub
 End Class

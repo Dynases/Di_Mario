@@ -75,8 +75,7 @@ Public Class Pr_Clientes
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        _tab.Close()
-        _modulo.Select()
+        Me.Close()
     End Sub
 
     Private Sub tbVendedorC_KeyDown(sender As Object, e As KeyEventArgs) Handles tbVendedorC.KeyDown

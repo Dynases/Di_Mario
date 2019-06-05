@@ -598,8 +598,7 @@ Public Class F1_Almacen
 
         Else
             '  Public _modulo As SideNavItem
-            _tab.Close()
-            _modulo.Select()
+            Me.Close()
 
         End If
     End Sub

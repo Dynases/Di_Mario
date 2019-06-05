@@ -441,8 +441,7 @@ Public Class F1_Dosificacion
 
         Else
             '  Public _modulo As SideNavItem
-            _modulo.Select()
-            _tab.Close()
+            Me.Close()
         End If
     End Sub
 End Class

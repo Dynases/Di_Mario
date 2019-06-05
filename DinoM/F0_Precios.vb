@@ -476,8 +476,7 @@ Public Class F0_Precios
         If (_fnAccesible()) Then
             _prInhabiliitar()
         Else
-            _tab.Close()
-            _modulo.Select()
+            Me.Close()
 
         End If
     End Sub

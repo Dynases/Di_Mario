@@ -685,10 +685,9 @@ Public Class F0_KardexMovimiento
         End If
     End Sub
     Private Sub _prSalir()
-        
 
-            _modulo.Select()
-            _tab.Close()
+
+        Me.Close()
 
 
     End Sub

@@ -269,8 +269,7 @@ Public Class Pr_KardexCredito
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
 
-        _tab.Close()
-        _modulo.Select()
+        Me.Close()
 
     End Sub
     Sub _prHabilitar()

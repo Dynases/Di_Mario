@@ -507,9 +507,8 @@ Public Class F0_LibroVenta
         Return False
     End Function
     Private Sub _prSalir()
-   
-            _modulo.Select()
-            _tab.Close()
+
+        Me.Close()
 
 
     End Sub

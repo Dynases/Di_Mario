@@ -784,8 +784,7 @@ Public Class F0_PagosCreditoCompraUlt
 
             End If
         Else
-            _tab.Close()
-            _modulo.Select()
+            Me.Close()
 
 
         End If

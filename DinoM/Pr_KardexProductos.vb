@@ -403,8 +403,7 @@ Public Class Pr_KardexProductos
 
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        _tab.Close()
-        _modulo.Select()
+        Me.Close()
     End Sub
 
     'Private Sub CheckTodosVendedor_CheckedChanged(sender As Object, e As EventArgs) Handles checkDetallado.CheckedChanged

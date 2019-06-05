@@ -27,7 +27,7 @@ Public Class F0_KardexMovimiento
         ''L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         _prCargarComboLibreriaDeposito(cbAlmacen)
         _prValidarLote()
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
         _prInhabiliitar()
         ''_prAsignarPermisos()
         Me.Text = "KARDEX PRODUCTO"
@@ -696,7 +696,9 @@ Public Class F0_KardexMovimiento
     End Sub
 
     Private Sub btnSalir1_Click(sender As Object, e As EventArgs) Handles btnSalir1.Click
-        _tab.Close()
-        _modulo.Select()
+        '_tab.Close()
+        '_modulo.Select()
+
+        Me.Close()
     End Sub
 End Class

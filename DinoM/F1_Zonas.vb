@@ -33,6 +33,7 @@ Public Class F1_Zonas
 #Region "Metodos Privados"
     Private Sub _prIniciarTodo()
         Me.Text = "ZONAS"
+
         _prInicarMapa()
         '' L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         _prMaxLength()

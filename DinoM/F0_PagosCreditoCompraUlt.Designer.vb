@@ -78,6 +78,7 @@ Partial Class F0_PagosCreditoCompraUlt
         '
         'PanelSuperior
         '
+        Me.PanelSuperior.Size = New System.Drawing.Size(1284, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.PanelSuperior.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -94,7 +95,9 @@ Partial Class F0_PagosCreditoCompraUlt
         '
         'PanelInferior
         '
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 755)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 602)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelInferior.Size = New System.Drawing.Size(1284, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.Transparent
@@ -124,28 +127,27 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.BubbleBarUsuario.ButtonBackAreaStyle.PaddingLeft = 3
         Me.BubbleBarUsuario.ButtonBackAreaStyle.PaddingRight = 3
         Me.BubbleBarUsuario.ButtonBackAreaStyle.PaddingTop = 3
-
         Me.BubbleBarUsuario.MouseOverTabColors.BorderColor = System.Drawing.SystemColors.Highlight
         Me.BubbleBarUsuario.SelectedTabColors.BorderColor = System.Drawing.Color.Black
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(5)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtNombreUsu.ReadOnly = True
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(179, 38)
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         Me.TxtNombreUsu.Text = "DEFAULT"
         '
         'PanelToolBar1
         '
         Me.PanelToolBar1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(5)
-        Me.PanelToolBar1.Size = New System.Drawing.Size(1312, 89)
+        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelToolBar1.Size = New System.Drawing.Size(1284, 72)
         '
         'btnSalir
         '
         Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnSalir.Size = New System.Drawing.Size(100, 89)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalir.Size = New System.Drawing.Size(75, 72)
         '
         'btnGrabar
         '
@@ -159,9 +161,14 @@ Partial Class F0_PagosCreditoCompraUlt
         'btnNuevo
         '
         '
+        'PanelToolBar2
+        '
+        Me.PanelToolBar2.Location = New System.Drawing.Point(1204, 0)
+        '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1312, 803)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(1284, 641)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelSuperior, 0)
@@ -183,9 +190,9 @@ Partial Class F0_PagosCreditoCompraUlt
         'btnPrimero
         '
         '
-        'MHighlighterFocus
+        'MPanelUserAct
         '
-
+        Me.MPanelUserAct.Location = New System.Drawing.Point(1084, 0)
         '
         'MRlAccion
         '
@@ -196,9 +203,9 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.MRlAccion.Dock = System.Windows.Forms.DockStyle.Right
         Me.MRlAccion.Font = New System.Drawing.Font("Georgia", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MRlAccion.ForeColor = System.Drawing.Color.Lime
-        Me.MRlAccion.Location = New System.Drawing.Point(1205, 0)
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(5)
-        Me.MRlAccion.Size = New System.Drawing.Size(0, 89)
+        Me.MRlAccion.Location = New System.Drawing.Point(1204, 0)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MRlAccion.Size = New System.Drawing.Size(0, 72)
         Me.MRlAccion.Text = ""
         '
         'PanelContent
@@ -206,16 +213,17 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.PanelContent.Controls.Add(Me.Panel3)
         Me.PanelContent.Controls.Add(Me.Panel2)
         Me.PanelContent.Margin = New System.Windows.Forms.Padding(2)
-        Me.PanelContent.Size = New System.Drawing.Size(1275, 666)
+        Me.PanelContent.Size = New System.Drawing.Size(1251, 530)
         '
         'Panel1
         '
-        Me.Panel1.Size = New System.Drawing.Size(1312, 666)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Size = New System.Drawing.Size(1284, 530)
         '
         'MSuperTabControlPanel1
         '
         Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(1275, 666)
+        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(1251, 530)
         '
         'MSuperTabControl
         '
@@ -233,10 +241,15 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.MSuperTabControl.ControlBox.Name = ""
         Me.MSuperTabControl.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MSuperTabControl.ControlBox.MenuBox, Me.MSuperTabControl.ControlBox.CloseBox})
         Me.MSuperTabControl.Controls.Add(Me.SuperTabControlPanel1)
-        Me.MSuperTabControl.Size = New System.Drawing.Size(1312, 666)
+        Me.MSuperTabControl.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MSuperTabControl.Size = New System.Drawing.Size(1284, 530)
         Me.MSuperTabControl.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabItem1})
         Me.MSuperTabControl.Controls.SetChildIndex(Me.SuperTabControlPanel1, 0)
         Me.MSuperTabControl.Controls.SetChildIndex(Me.MSuperTabControlPanel1, 0)
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(940, 0)
         '
         'Panel2
         '
@@ -244,9 +257,8 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.Panel2.Controls.Add(Me.GroupPanel1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1275, 295)
+        Me.Panel2.Size = New System.Drawing.Size(1251, 240)
         Me.Panel2.TabIndex = 0
         '
         'GroupPanel2
@@ -256,10 +268,9 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.GroupPanel2.Controls.Add(Me.grpagos)
         Me.GroupPanel2.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupPanel2.Location = New System.Drawing.Point(767, 0)
-        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupPanel2.Location = New System.Drawing.Point(575, 0)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(508, 295)
+        Me.GroupPanel2.Size = New System.Drawing.Size(676, 240)
         '
         '
         '
@@ -298,14 +309,13 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.grpagos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpagos.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpagos.Location = New System.Drawing.Point(0, 0)
-        Me.grpagos.Margin = New System.Windows.Forms.Padding(4)
         Me.grpagos.Name = "grpagos"
         Me.grpagos.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grpagos.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.grpagos.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
         Me.grpagos.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpagos.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
-        Me.grpagos.Size = New System.Drawing.Size(502, 268)
+        Me.grpagos.Size = New System.Drawing.Size(670, 217)
         Me.grpagos.TabIndex = 0
         Me.grpagos.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -323,9 +333,8 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(767, 295)
+        Me.GroupPanel1.Size = New System.Drawing.Size(575, 240)
         '
         '
         '
@@ -361,11 +370,12 @@ Partial Class F0_PagosCreditoCompraUlt
         '
         cbbanco_DesignTimeLayout.LayoutString = resources.GetString("cbbanco_DesignTimeLayout.LayoutString")
         Me.cbbanco.DesignTimeLayout = cbbanco_DesignTimeLayout
-        Me.cbbanco.Location = New System.Drawing.Point(511, 28)
+        Me.cbbanco.Location = New System.Drawing.Point(383, 23)
+        Me.cbbanco.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cbbanco.Name = "cbbanco"
         Me.cbbanco.SelectedIndex = -1
         Me.cbbanco.SelectedItem = Nothing
-        Me.cbbanco.Size = New System.Drawing.Size(190, 26)
+        Me.cbbanco.Size = New System.Drawing.Size(142, 22)
         Me.cbbanco.TabIndex = 234
         Me.cbbanco.Visible = False
         '
@@ -378,12 +388,11 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.tbObservacion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbObservacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbObservacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbObservacion.Location = New System.Drawing.Point(189, 104)
-        Me.tbObservacion.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbObservacion.Location = New System.Drawing.Point(142, 84)
         Me.tbObservacion.Multiline = True
         Me.tbObservacion.Name = "tbObservacion"
         Me.tbObservacion.PreventEnterBeep = True
-        Me.tbObservacion.Size = New System.Drawing.Size(262, 113)
+        Me.tbObservacion.Size = New System.Drawing.Size(196, 92)
         Me.tbObservacion.TabIndex = 4
         '
         'LabelX3
@@ -396,11 +405,10 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX3.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX3.Location = New System.Drawing.Point(33, 104)
-        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX3.Location = New System.Drawing.Point(25, 84)
         Me.LabelX3.Name = "LabelX3"
         Me.LabelX3.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX3.Size = New System.Drawing.Size(105, 20)
+        Me.LabelX3.Size = New System.Drawing.Size(84, 16)
         Me.LabelX3.TabIndex = 231
         Me.LabelX3.Text = "Observacion:"
         '
@@ -416,8 +424,7 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.tbfecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbfecha.IsInputReadOnly = True
         Me.tbfecha.IsPopupCalendarOpen = False
-        Me.tbfecha.Location = New System.Drawing.Point(189, 63)
-        Me.tbfecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbfecha.Location = New System.Drawing.Point(142, 51)
         '
         '
         '
@@ -448,7 +455,7 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.tbfecha.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbfecha.MonthCalendar.TodayButtonVisible = True
         Me.tbfecha.Name = "tbfecha"
-        Me.tbfecha.Size = New System.Drawing.Size(160, 26)
+        Me.tbfecha.Size = New System.Drawing.Size(120, 22)
         Me.tbfecha.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.tbfecha.TabIndex = 1
         '
@@ -462,11 +469,10 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX4.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX4.Location = New System.Drawing.Point(33, 63)
-        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX4.Location = New System.Drawing.Point(25, 51)
         Me.LabelX4.Name = "LabelX4"
         Me.LabelX4.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX4.Size = New System.Drawing.Size(54, 20)
+        Me.LabelX4.Size = New System.Drawing.Size(44, 16)
         Me.LabelX4.TabIndex = 30
         Me.LabelX4.Text = "Fecha:"
         '
@@ -480,11 +486,10 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX2.Location = New System.Drawing.Point(33, 27)
-        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX2.Location = New System.Drawing.Point(25, 22)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX2.Size = New System.Drawing.Size(116, 20)
+        Me.LabelX2.Size = New System.Drawing.Size(93, 16)
         Me.LabelX2.TabIndex = 25
         Me.LabelX2.Text = "Nro Cobranza:"
         '
@@ -498,12 +503,11 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.tbnrodoc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbnrodoc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbnrodoc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbnrodoc.Location = New System.Drawing.Point(189, 25)
-        Me.tbnrodoc.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbnrodoc.Location = New System.Drawing.Point(142, 20)
         Me.tbnrodoc.Name = "tbnrodoc"
         Me.tbnrodoc.PreventEnterBeep = True
         Me.tbnrodoc.ReadOnly = True
-        Me.tbnrodoc.Size = New System.Drawing.Size(123, 24)
+        Me.tbnrodoc.Size = New System.Drawing.Size(92, 21)
         Me.tbnrodoc.TabIndex = 0
         '
         'GroupPanel3
@@ -514,9 +518,8 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.GroupPanel3.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel3.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel3.Name = "GroupPanel3"
-        Me.GroupPanel3.Size = New System.Drawing.Size(1275, 141)
+        Me.GroupPanel3.Size = New System.Drawing.Size(1251, 103)
         '
         '
         '
@@ -556,7 +559,6 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.grfactura.GroupTotalRowFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grfactura.HideSelection = Janus.Windows.GridEX.HideSelection.Highlight
         Me.grfactura.Location = New System.Drawing.Point(0, 0)
-        Me.grfactura.Margin = New System.Windows.Forms.Padding(4)
         Me.grfactura.Name = "grfactura"
         Me.grfactura.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grfactura.Office2007CustomColor = System.Drawing.Color.DodgerBlue
@@ -565,7 +567,7 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.grfactura.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grfactura.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
         Me.grfactura.SelectionMode = Janus.Windows.GridEX.SelectionMode.MultipleSelectionSameTable
-        Me.grfactura.Size = New System.Drawing.Size(1269, 114)
+        Me.grfactura.Size = New System.Drawing.Size(1245, 80)
         Me.grfactura.TabIndex = 0
         Me.grfactura.TotalRowFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grfactura.TotalRowFormatStyle.ForeColor = System.Drawing.Color.Black
@@ -576,9 +578,10 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.Panel3.Controls.Add(Me.GroupPanel3)
         Me.Panel3.Controls.Add(Me.GpanelDeudas)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 295)
+        Me.Panel3.Location = New System.Drawing.Point(0, 240)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1275, 371)
+        Me.Panel3.Size = New System.Drawing.Size(1251, 290)
         Me.Panel3.TabIndex = 1
         '
         'GpanelDeudas
@@ -588,9 +591,10 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.GpanelDeudas.Controls.Add(Me.grPendiente)
         Me.GpanelDeudas.DisabledBackColor = System.Drawing.Color.Empty
         Me.GpanelDeudas.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GpanelDeudas.Location = New System.Drawing.Point(0, 141)
+        Me.GpanelDeudas.Location = New System.Drawing.Point(0, 103)
+        Me.GpanelDeudas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GpanelDeudas.Name = "GpanelDeudas"
-        Me.GpanelDeudas.Size = New System.Drawing.Size(1275, 230)
+        Me.GpanelDeudas.Size = New System.Drawing.Size(1251, 187)
         '
         '
         '
@@ -629,12 +633,13 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.grPendiente.EnterKeyBehavior = Janus.Windows.GridEX.EnterKeyBehavior.None
         Me.grPendiente.Font = New System.Drawing.Font("Georgia", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grPendiente.Location = New System.Drawing.Point(0, 0)
+        Me.grPendiente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.grPendiente.Name = "grPendiente"
         Me.grPendiente.RowFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grPendiente.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
         Me.grPendiente.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grPendiente.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
-        Me.grPendiente.Size = New System.Drawing.Size(1269, 203)
+        Me.grPendiente.Size = New System.Drawing.Size(1245, 164)
         Me.grPendiente.TabIndex = 0
         '
         'SuperTabItem1
@@ -649,8 +654,9 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.SuperTabControlPanel1.Controls.Add(Me.GroupPanel5)
         Me.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.SuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.SuperTabControlPanel1.Name = "SuperTabControlPanel1"
-        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(1275, 666)
+        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(956, 541)
         Me.SuperTabControlPanel1.TabIndex = 0
         Me.SuperTabControlPanel1.TabItem = Me.SuperTabItem1
         '
@@ -664,8 +670,9 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.GroupPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel5.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel5.Location = New System.Drawing.Point(0, 0)
+        Me.GroupPanel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupPanel5.Name = "GroupPanel5"
-        Me.GroupPanel5.Size = New System.Drawing.Size(1275, 666)
+        Me.GroupPanel5.Size = New System.Drawing.Size(956, 541)
         '
         '
         '
@@ -704,6 +711,7 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.grcobranza.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grcobranza.HeaderFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grcobranza.Location = New System.Drawing.Point(0, 0)
+        Me.grcobranza.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.grcobranza.Name = "grcobranza"
         Me.grcobranza.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grcobranza.Office2007CustomColor = System.Drawing.Color.DodgerBlue
@@ -711,17 +719,18 @@ Partial Class F0_PagosCreditoCompraUlt
         Me.grcobranza.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grcobranza.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
         Me.grcobranza.SelectionMode = Janus.Windows.GridEX.SelectionMode.MultipleSelection
-        Me.grcobranza.Size = New System.Drawing.Size(1269, 635)
+        Me.grcobranza.Size = New System.Drawing.Size(950, 514)
         Me.grcobranza.TabIndex = 0
         Me.grcobranza.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
         'F0_PagosCreditoCompraUlt
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1312, 803)
-        Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.ClientSize = New System.Drawing.Size(1284, 641)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "F0_PagosCreditoCompraUlt"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "F0_PagosCredito"
         Me.Controls.SetChildIndex(Me.PanelPrincipal, 0)
         Me.PanelSuperior.ResumeLayout(False)

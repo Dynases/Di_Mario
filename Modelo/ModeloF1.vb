@@ -20,7 +20,7 @@ Public Class ModeloF1
         TxtNombreUsu.Text = MGlobal.gs_usuario
         TxtNombreUsu.ReadOnly = True
 
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
         Me.SupTabItemBusqueda.Visible = False
 
         _MListEstBuscador = _PMOGetListEstructuraBuscador()

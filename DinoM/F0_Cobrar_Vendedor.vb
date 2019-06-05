@@ -23,13 +23,21 @@ Public Class F0_Cobrar_Vendedor
     Dim bandera As Boolean = False
     Dim Bin As New MemoryStream
 #End Region
+    ''Evita el parpadeo de las ventanas''
+    'Protected Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim cp As CreateParams = MyBase.CreateParams
+    '        cp.ExStyle = cp.ExStyle Or &H2000000
+    '        Return cp
+    '    End Get
+    'End Property
 #Region "METODOS PRIVADOS"
 
     Private Sub _IniciarTodo()
 
 
         L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
         _prAsignarPermisos()
         Me.Text = "PAGO CLIENTE POR VENDEDOR"
         Dim blah As New Bitmap(New Bitmap(My.Resources.cobro), 20, 20)

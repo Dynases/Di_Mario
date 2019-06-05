@@ -10,6 +10,7 @@ Imports GMap.NET.WindowsForms.Markers
 Imports GMap.NET.WindowsForms
 Imports GMap.NET.WindowsForms.ToolTips
 Imports DevComponents.DotNetBar.Controls
+Imports System.Windows.Forms.Form
 
 
 Public Class F1_Vendedor
@@ -750,10 +751,44 @@ Public Class F1_Vendedor
 
 
     Private Sub F1_Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'EnableDoubleBuffering()
         _prIniciarTodo()
 
     End Sub
 
+
+    Public Sub EnableDoubleBuffering()
+
+        Me.DoubleBuffered = True
+        Me.SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
+        'Dim controlType As Type = control.GetType()
+        Dim aProp As System.Reflection.PropertyInfo = GetType(System.Windows.Forms.Control).GetProperty("DoubleBuffered", System.Reflection.BindingFlags.NonPublic Or System.Reflection.BindingFlags.Instance)
+        aProp.SetValue(JGrM_Buscador, True, Nothing)
+        aProp.SetValue(MPanelSup, True, Nothing)
+        aProp.SetValue(TableLayoutPanel1, True, Nothing)
+        aProp.SetValue(Panel1, True, Nothing)
+        aProp.SetValue(Panel2, True, Nothing)
+        aProp.SetValue(Panel4, True, Nothing)
+        aProp.SetValue(GroupPanel1, True, Nothing)
+        aProp.SetValue(GroupPanel2, True, Nothing)
+        aProp.SetValue(GroupPanel3, True, Nothing)
+
+
+        'GetType(Panel).InvokeMember("DoubleBuffered", Reflection.BindingFlags.SetProperty Or Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic, Nothing, MPanelSup, New Object() {True})
+        'GetType(Panel).InvokeMember("DoubleBuffered", Reflection.BindingFlags.SetProperty Or Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic, Nothing, Panel1, New Object() {True})
+        'GetType(Panel).InvokeMember("DoubleBuffered", Reflection.BindingFlags.SetProperty Or Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic, Nothing, Panel2, New Object() {True})
+        'GetType(Panel).InvokeMember("DoubleBuffered", Reflection.BindingFlags.SetProperty Or Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic, Nothing, Panel4, New Object() {True})
+
+        'Me.SetStyle(ControlStyles.AllPaintingInWmPaint, True)
+        'Me.SetStyle(ControlStyles.ResizeRedraw, True)
+        'Me.SetStyle(ControlStyles.UserPaint, True)
+        'Me.SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
+        'Me.SetStyle(ControlStyles.AllPaintingInWmPaint, True)
+        'Me.SetStyle(ControlStyles.ContainerControl, True)
+        'Me.SetStyle(ControlStyles.SupportsTransparentBackColor, True)
+        'Me.SetStyle(ControlStyles.CacheText, True)
+
+    End Sub
     Private Sub Gmc_Cliente_DoubleClick(sender As Object, e As EventArgs) Handles Gmc_Cliente.DoubleClick
         If (btnGrabar.Enabled = True) Then
 
@@ -898,4 +933,6 @@ Public Class F1_Vendedor
 
         End If
     End Sub
+
+
 End Class

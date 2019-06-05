@@ -46,6 +46,7 @@ Public Class F1_Almacen
         Dim ico As Icon = Icon.FromHandle(blah.GetHicon())
         Me.Icon = ico
 
+
     End Sub
     Private Sub _prCargarComboLibreriaDepositos(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo)
         Dim dt As New DataTable
@@ -548,6 +549,7 @@ Public Class F1_Almacen
 
     Private Sub F1_Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _prIniciarTodo()
+        SuperTabControl1.SelectedTabIndex = 0
 
     End Sub
 

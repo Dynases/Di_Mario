@@ -22,8 +22,8 @@ Partial Class F1_MapaCLientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F1_MapaCLientes))
         Dim cbZona_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F1_MapaCLientes))
         Me.PanelPrincipal = New System.Windows.Forms.Panel()
         Me.PanelMapa = New System.Windows.Forms.Panel()
         Me.btnz2 = New DevComponents.DotNetBar.ButtonX()
@@ -54,7 +54,6 @@ Partial Class F1_MapaCLientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelInferior = New System.Windows.Forms.Panel()
         Me.PanelSuperior = New System.Windows.Forms.Panel()
-        Me.btnSalir = New DevComponents.DotNetBar.ButtonX()
         Me.lbmap = New DevComponents.DotNetBar.Controls.ReflectionLabel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.pbmap = New System.Windows.Forms.PictureBox()
@@ -89,9 +88,8 @@ Partial Class F1_MapaCLientes
         Me.PanelPrincipal.Controls.Add(Me.PanelSuperior)
         Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelPrincipal.Location = New System.Drawing.Point(0, 0)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelPrincipal.Name = "PanelPrincipal"
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1705, 902)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(1235, 609)
         Me.PanelPrincipal.TabIndex = 0
         '
         'PanelMapa
@@ -101,10 +99,9 @@ Partial Class F1_MapaCLientes
         Me.PanelMapa.Controls.Add(Me.btnz1)
         Me.PanelMapa.Controls.Add(Me.Gmc_Cliente)
         Me.PanelMapa.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelMapa.Location = New System.Drawing.Point(477, 74)
-        Me.PanelMapa.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelMapa.Location = New System.Drawing.Point(358, 60)
         Me.PanelMapa.Name = "PanelMapa"
-        Me.PanelMapa.Size = New System.Drawing.Size(1228, 794)
+        Me.PanelMapa.Size = New System.Drawing.Size(877, 521)
         Me.PanelMapa.TabIndex = 1
         '
         'btnz2
@@ -112,10 +109,9 @@ Partial Class F1_MapaCLientes
         Me.btnz2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnz2.Image = Global.DinoM.My.Resources.Resources.zoomout
         Me.btnz2.ImageFixedSize = New System.Drawing.Size(35, 35)
-        Me.btnz2.Location = New System.Drawing.Point(68, 108)
-        Me.btnz2.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnz2.Location = New System.Drawing.Point(51, 88)
         Me.btnz2.Name = "btnz2"
-        Me.btnz2.Size = New System.Drawing.Size(52, 48)
+        Me.btnz2.Size = New System.Drawing.Size(39, 39)
         Me.btnz2.TabIndex = 4
         '
         'btnz1
@@ -123,10 +119,9 @@ Partial Class F1_MapaCLientes
         Me.btnz1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnz1.Image = Global.DinoM.My.Resources.Resources.zoomin
         Me.btnz1.ImageFixedSize = New System.Drawing.Size(35, 35)
-        Me.btnz1.Location = New System.Drawing.Point(8, 108)
-        Me.btnz1.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnz1.Location = New System.Drawing.Point(6, 88)
         Me.btnz1.Name = "btnz1"
-        Me.btnz1.Size = New System.Drawing.Size(52, 48)
+        Me.btnz1.Size = New System.Drawing.Size(39, 39)
         Me.btnz1.TabIndex = 3
         '
         'Gmc_Cliente
@@ -141,7 +136,6 @@ Partial Class F1_MapaCLientes
         Me.Gmc_Cliente.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow
         Me.Gmc_Cliente.LevelsKeepInMemmory = 5
         Me.Gmc_Cliente.Location = New System.Drawing.Point(0, 0)
-        Me.Gmc_Cliente.Margin = New System.Windows.Forms.Padding(4)
         Me.Gmc_Cliente.MarkersEnabled = True
         Me.Gmc_Cliente.MaxZoom = 2
         Me.Gmc_Cliente.MinZoom = 2
@@ -154,7 +148,7 @@ Partial Class F1_MapaCLientes
         Me.Gmc_Cliente.ScaleMode = GMap.NET.WindowsForms.ScaleModes.[Integer]
         Me.Gmc_Cliente.SelectedAreaFillColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.Gmc_Cliente.ShowTileGridLines = False
-        Me.Gmc_Cliente.Size = New System.Drawing.Size(1228, 794)
+        Me.Gmc_Cliente.Size = New System.Drawing.Size(877, 521)
         Me.Gmc_Cliente.TabIndex = 0
         Me.Gmc_Cliente.Zoom = 0R
         '
@@ -164,10 +158,9 @@ Partial Class F1_MapaCLientes
         Me.PanelGroup.Controls.Add(Me.slpanelInfo)
         Me.PanelGroup.Controls.Add(Me.Panel1)
         Me.PanelGroup.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PanelGroup.Location = New System.Drawing.Point(0, 74)
-        Me.PanelGroup.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelGroup.Location = New System.Drawing.Point(0, 60)
         Me.PanelGroup.Name = "PanelGroup"
-        Me.PanelGroup.Size = New System.Drawing.Size(477, 794)
+        Me.PanelGroup.Size = New System.Drawing.Size(358, 521)
         Me.PanelGroup.TabIndex = 0
         '
         'slpanelInfo
@@ -179,9 +172,8 @@ Partial Class F1_MapaCLientes
         Me.slpanelInfo.Controls.Add(Me.Panel4)
         Me.slpanelInfo.Controls.Add(Me.Panel3)
         Me.slpanelInfo.Location = New System.Drawing.Point(0, 0)
-        Me.slpanelInfo.Margin = New System.Windows.Forms.Padding(4)
         Me.slpanelInfo.Name = "slpanelInfo"
-        Me.slpanelInfo.Size = New System.Drawing.Size(0, 793)
+        Me.slpanelInfo.Size = New System.Drawing.Size(1, 521)
         Me.slpanelInfo.TabIndex = 1
         Me.slpanelInfo.Text = "SlidePanel1"
         Me.slpanelInfo.UsesBlockingAnimation = False
@@ -197,10 +189,9 @@ Partial Class F1_MapaCLientes
         Me.Panel4.Controls.Add(Me.lbcliente)
         Me.Panel4.Controls.Add(Me.lb1)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(0, 73)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel4.Location = New System.Drawing.Point(0, 59)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(0, 720)
+        Me.Panel4.Size = New System.Drawing.Size(1, 462)
         Me.Panel4.TabIndex = 2
         '
         'lbdireccion
@@ -208,11 +199,10 @@ Partial Class F1_MapaCLientes
         Me.lbdireccion.BackColor = System.Drawing.Color.WhiteSmoke
         Me.lbdireccion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lbdireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbdireccion.Location = New System.Drawing.Point(28, 133)
-        Me.lbdireccion.Margin = New System.Windows.Forms.Padding(4)
+        Me.lbdireccion.Location = New System.Drawing.Point(21, 108)
         Me.lbdireccion.Multiline = True
         Me.lbdireccion.Name = "lbdireccion"
-        Me.lbdireccion.Size = New System.Drawing.Size(371, 38)
+        Me.lbdireccion.Size = New System.Drawing.Size(278, 31)
         Me.lbdireccion.TabIndex = 7
         '
         'lbtelefono
@@ -220,10 +210,9 @@ Partial Class F1_MapaCLientes
         Me.lbtelefono.AutoSize = True
         Me.lbtelefono.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbtelefono.ForeColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbtelefono.Location = New System.Drawing.Point(29, 204)
-        Me.lbtelefono.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbtelefono.Location = New System.Drawing.Point(22, 166)
         Me.lbtelefono.Name = "lbtelefono"
-        Me.lbtelefono.Size = New System.Drawing.Size(82, 19)
+        Me.lbtelefono.Size = New System.Drawing.Size(65, 16)
         Me.lbtelefono.TabIndex = 5
         Me.lbtelefono.Text = "CLIENTE:"
         Me.lbtelefono.Visible = False
@@ -233,10 +222,9 @@ Partial Class F1_MapaCLientes
         Me.lb4.AutoSize = True
         Me.lb4.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lb4.Location = New System.Drawing.Point(24, 175)
-        Me.lb4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb4.Location = New System.Drawing.Point(18, 142)
         Me.lb4.Name = "lb4"
-        Me.lb4.Size = New System.Drawing.Size(123, 22)
+        Me.lb4.Size = New System.Drawing.Size(95, 18)
         Me.lb4.TabIndex = 4
         Me.lb4.Text = "TELEFONO:"
         Me.lb4.Visible = False
@@ -246,10 +234,9 @@ Partial Class F1_MapaCLientes
         Me.lb3.AutoSize = True
         Me.lb3.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lb3.Location = New System.Drawing.Point(23, 106)
-        Me.lb3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb3.Location = New System.Drawing.Point(17, 86)
         Me.lb3.Name = "lb3"
-        Me.lb3.Size = New System.Drawing.Size(123, 22)
+        Me.lb3.Size = New System.Drawing.Size(97, 18)
         Me.lb3.TabIndex = 2
         Me.lb3.Text = "DIRECCION:"
         Me.lb3.Visible = False
@@ -259,10 +246,9 @@ Partial Class F1_MapaCLientes
         Me.lbcliente.AutoSize = True
         Me.lbcliente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbcliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbcliente.Location = New System.Drawing.Point(23, 73)
-        Me.lbcliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbcliente.Location = New System.Drawing.Point(17, 59)
         Me.lbcliente.Name = "lbcliente"
-        Me.lbcliente.Size = New System.Drawing.Size(82, 19)
+        Me.lbcliente.Size = New System.Drawing.Size(65, 16)
         Me.lbcliente.TabIndex = 1
         Me.lbcliente.Text = "CLIENTE:"
         Me.lbcliente.Visible = False
@@ -272,10 +258,9 @@ Partial Class F1_MapaCLientes
         Me.lb1.AutoSize = True
         Me.lb1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lb1.Location = New System.Drawing.Point(21, 36)
-        Me.lb1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb1.Location = New System.Drawing.Point(16, 29)
         Me.lb1.Name = "lb1"
-        Me.lb1.Size = New System.Drawing.Size(100, 22)
+        Me.lb1.Size = New System.Drawing.Size(77, 18)
         Me.lb1.TabIndex = 0
         Me.lb1.Text = "CLIENTE:"
         Me.lb1.Visible = False
@@ -290,20 +275,18 @@ Partial Class F1_MapaCLientes
         Me.Panel3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel3.ForeColor = System.Drawing.Color.White
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Padding = New System.Windows.Forms.Padding(33, 25, 0, 18)
-        Me.Panel3.Size = New System.Drawing.Size(0, 73)
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(25, 20, 0, 15)
+        Me.Panel3.Size = New System.Drawing.Size(1, 59)
         Me.Panel3.TabIndex = 1
         '
         'PictureBox2
         '
         Me.PictureBox2.BackgroundImage = Global.DinoM.My.Resources.Resources.man_18
         Me.PictureBox2.Image = Global.DinoM.My.Resources.Resources.man_18
-        Me.PictureBox2.Location = New System.Drawing.Point(379, 14)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox2.Location = New System.Drawing.Point(284, 11)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(56, 43)
+        Me.PictureBox2.Size = New System.Drawing.Size(42, 35)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
@@ -313,11 +296,10 @@ Partial Class F1_MapaCLientes
         Me.lb2.AutoSize = True
         Me.lb2.Dock = System.Windows.Forms.DockStyle.Left
         Me.lb2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb2.Location = New System.Drawing.Point(72, 25)
-        Me.lb2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb2.Location = New System.Drawing.Point(54, 20)
         Me.lb2.Name = "lb2"
-        Me.lb2.Padding = New System.Windows.Forms.Padding(8, 1, 0, 0)
-        Me.lb2.Size = New System.Drawing.Size(285, 23)
+        Me.lb2.Padding = New System.Windows.Forms.Padding(6, 1, 0, 0)
+        Me.lb2.Size = New System.Drawing.Size(224, 19)
         Me.lb2.TabIndex = 0
         Me.lb2.Text = "INFORMACION DEL CLIENTE"
         Me.lb2.Visible = False
@@ -331,10 +313,9 @@ Partial Class F1_MapaCLientes
         Me.btn1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn1.Location = New System.Drawing.Point(33, 25)
-        Me.btn1.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn1.Location = New System.Drawing.Point(25, 20)
         Me.btn1.Name = "btn1"
-        Me.btn1.Size = New System.Drawing.Size(39, 30)
+        Me.btn1.Size = New System.Drawing.Size(29, 24)
         Me.btn1.TabIndex = 1
         Me.btn1.UseVisualStyleBackColor = False
         Me.btn1.Visible = False
@@ -345,9 +326,8 @@ Partial Class F1_MapaCLientes
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(477, 794)
+        Me.Panel1.Size = New System.Drawing.Size(358, 521)
         Me.Panel1.TabIndex = 0
         Me.Panel1.Visible = False
         '
@@ -357,11 +337,10 @@ Partial Class F1_MapaCLientes
         Me.PanelJanus.Controls.Add(Me.GroupPanel1)
         Me.PanelJanus.Controls.Add(Me.GroupPanel2)
         Me.PanelJanus.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelJanus.Location = New System.Drawing.Point(0, 73)
-        Me.PanelJanus.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelJanus.Location = New System.Drawing.Point(0, 59)
         Me.PanelJanus.Name = "PanelJanus"
-        Me.PanelJanus.Padding = New System.Windows.Forms.Padding(8, 7, 8, 7)
-        Me.PanelJanus.Size = New System.Drawing.Size(477, 721)
+        Me.PanelJanus.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.PanelJanus.Size = New System.Drawing.Size(358, 462)
         Me.PanelJanus.TabIndex = 1
         '
         'GroupPanel1
@@ -371,10 +350,9 @@ Partial Class F1_MapaCLientes
         Me.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel1.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupPanel1.Location = New System.Drawing.Point(8, 83)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupPanel1.Location = New System.Drawing.Point(6, 68)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(461, 631)
+        Me.GroupPanel1.Size = New System.Drawing.Size(346, 388)
         '
         '
         '
@@ -413,7 +391,6 @@ Partial Class F1_MapaCLientes
         Me.grCliente.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grCliente.HideSelection = Janus.Windows.GridEX.HideSelection.Highlight
         Me.grCliente.Location = New System.Drawing.Point(0, 0)
-        Me.grCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.grCliente.Name = "grCliente"
         Me.grCliente.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grCliente.Office2007CustomColor = System.Drawing.Color.DodgerBlue
@@ -421,7 +398,7 @@ Partial Class F1_MapaCLientes
         Me.grCliente.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
         Me.grCliente.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grCliente.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
-        Me.grCliente.Size = New System.Drawing.Size(461, 610)
+        Me.grCliente.Size = New System.Drawing.Size(346, 371)
         Me.grCliente.TabIndex = 0
         Me.grCliente.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         Me.grCliente.VisualStyleAreas.CardsStyle = Janus.Windows.GridEX.VisualStyle.Office2007
@@ -432,10 +409,9 @@ Partial Class F1_MapaCLientes
         Me.GroupPanel2.Controls.Add(Me.Panel6)
         Me.GroupPanel2.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupPanel2.Location = New System.Drawing.Point(8, 7)
-        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupPanel2.Location = New System.Drawing.Point(6, 6)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(461, 76)
+        Me.GroupPanel2.Size = New System.Drawing.Size(346, 62)
         '
         '
         '
@@ -469,9 +445,8 @@ Partial Class F1_MapaCLientes
         Me.Panel6.Controls.Add(Me.cbZona)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(461, 55)
+        Me.Panel6.Size = New System.Drawing.Size(346, 45)
         Me.Panel6.TabIndex = 0
         '
         'checkTodos
@@ -481,10 +456,9 @@ Partial Class F1_MapaCLientes
         '
         Me.checkTodos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.checkTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.checkTodos.Location = New System.Drawing.Point(25, 9)
-        Me.checkTodos.Margin = New System.Windows.Forms.Padding(4)
+        Me.checkTodos.Location = New System.Drawing.Point(19, 7)
         Me.checkTodos.Name = "checkTodos"
-        Me.checkTodos.Size = New System.Drawing.Size(87, 28)
+        Me.checkTodos.Size = New System.Drawing.Size(65, 23)
         Me.checkTodos.TabIndex = 2
         Me.checkTodos.Text = "TODOS"
         Me.checkTodos.TextColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(127, Byte), Integer))
@@ -496,14 +470,13 @@ Partial Class F1_MapaCLientes
         cbZona_DesignTimeLayout.LayoutString = resources.GetString("cbZona_DesignTimeLayout.LayoutString")
         Me.cbZona.DesignTimeLayout = cbZona_DesignTimeLayout
         Me.cbZona.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbZona.Location = New System.Drawing.Point(144, 9)
-        Me.cbZona.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbZona.Location = New System.Drawing.Point(108, 7)
         Me.cbZona.Name = "cbZona"
         Me.cbZona.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbZona.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.cbZona.SelectedIndex = -1
         Me.cbZona.SelectedItem = Nothing
-        Me.cbZona.Size = New System.Drawing.Size(293, 26)
+        Me.cbZona.Size = New System.Drawing.Size(220, 22)
         Me.cbZona.TabIndex = 1
         Me.cbZona.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -515,10 +488,9 @@ Partial Class F1_MapaCLientes
         Me.Panel2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.ForeColor = System.Drawing.Color.White
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Padding = New System.Windows.Forms.Padding(20, 25, 0, 0)
-        Me.Panel2.Size = New System.Drawing.Size(477, 73)
+        Me.Panel2.Padding = New System.Windows.Forms.Padding(15, 20, 0, 0)
+        Me.Panel2.Size = New System.Drawing.Size(358, 59)
         Me.Panel2.TabIndex = 0
         '
         'Label1
@@ -526,10 +498,9 @@ Partial Class F1_MapaCLientes
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(20, 25)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(15, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(240, 24)
+        Me.Label1.Size = New System.Drawing.Size(197, 19)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "INFORMACION CLIENTE"
         '
@@ -537,42 +508,23 @@ Partial Class F1_MapaCLientes
         '
         Me.PanelInferior.BackgroundImage = CType(resources.GetObject("PanelInferior.BackgroundImage"), System.Drawing.Image)
         Me.PanelInferior.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 868)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 581)
         Me.PanelInferior.Name = "PanelInferior"
-        Me.PanelInferior.Size = New System.Drawing.Size(1705, 34)
+        Me.PanelInferior.Size = New System.Drawing.Size(1235, 28)
         Me.PanelInferior.TabIndex = 2
         '
         'PanelSuperior
         '
         Me.PanelSuperior.BackgroundImage = CType(resources.GetObject("PanelSuperior.BackgroundImage"), System.Drawing.Image)
-        Me.PanelSuperior.Controls.Add(Me.btnSalir)
         Me.PanelSuperior.Controls.Add(Me.lbmap)
         Me.PanelSuperior.Controls.Add(Me.Panel5)
         Me.PanelSuperior.Controls.Add(Me.PictureBox1)
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSuperior.Location = New System.Drawing.Point(0, 0)
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelSuperior.Name = "PanelSuperior"
-        Me.PanelSuperior.Padding = New System.Windows.Forms.Padding(0, 0, 93, 0)
-        Me.PanelSuperior.Size = New System.Drawing.Size(1705, 74)
+        Me.PanelSuperior.Padding = New System.Windows.Forms.Padding(0, 0, 70, 0)
+        Me.PanelSuperior.Size = New System.Drawing.Size(1235, 60)
         Me.PanelSuperior.TabIndex = 0
-        '
-        'btnSalir
-        '
-        Me.btnSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.btnSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange
-        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
-        Me.btnSalir.ImageFixedSize = New System.Drawing.Size(48, 48)
-        Me.btnSalir.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btnSalir.Location = New System.Drawing.Point(1425, -5)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(115, 78)
-        Me.btnSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.btnSalir.TabIndex = 3
-        Me.btnSalir.Text = "SALIR"
-        Me.btnSalir.TextColor = System.Drawing.Color.White
         '
         'lbmap
         '
@@ -581,10 +533,9 @@ Partial Class F1_MapaCLientes
         '
         Me.lbmap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.lbmap.Dock = System.Windows.Forms.DockStyle.Left
-        Me.lbmap.Location = New System.Drawing.Point(105, 0)
-        Me.lbmap.Margin = New System.Windows.Forms.Padding(4)
+        Me.lbmap.Location = New System.Drawing.Point(79, 0)
         Me.lbmap.Name = "lbmap"
-        Me.lbmap.Size = New System.Drawing.Size(372, 74)
+        Me.lbmap.Size = New System.Drawing.Size(279, 60)
         Me.lbmap.TabIndex = 2
         Me.lbmap.Text = "<b><font size=""+6""><font color=""#FEFCFC"">UBICACIONES DE CLIENTES</font></font></b" &
     ">"
@@ -595,10 +546,9 @@ Partial Class F1_MapaCLientes
         Me.Panel5.Controls.Add(Me.pbmap)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Padding = New System.Windows.Forms.Padding(27, 12, 13, 12)
-        Me.Panel5.Size = New System.Drawing.Size(105, 74)
+        Me.Panel5.Padding = New System.Windows.Forms.Padding(20, 10, 10, 10)
+        Me.Panel5.Size = New System.Drawing.Size(79, 60)
         Me.Panel5.TabIndex = 1
         '
         'pbmap
@@ -606,10 +556,9 @@ Partial Class F1_MapaCLientes
         Me.pbmap.BackgroundImage = Global.DinoM.My.Resources.Resources.IconoMapa
         Me.pbmap.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pbmap.Image = Global.DinoM.My.Resources.Resources.IconoMapa
-        Me.pbmap.Location = New System.Drawing.Point(27, 12)
-        Me.pbmap.Margin = New System.Windows.Forms.Padding(4)
+        Me.pbmap.Location = New System.Drawing.Point(20, 10)
         Me.pbmap.Name = "pbmap"
-        Me.pbmap.Size = New System.Drawing.Size(65, 50)
+        Me.pbmap.Size = New System.Drawing.Size(49, 40)
         Me.pbmap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbmap.TabIndex = 0
         Me.pbmap.TabStop = False
@@ -619,20 +568,18 @@ Partial Class F1_MapaCLientes
         '
         Me.PictureBox1.BackgroundImage = Global.DinoM.My.Resources.Resources.dinases1
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox1.Location = New System.Drawing.Point(1272, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Location = New System.Drawing.Point(910, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(340, 74)
+        Me.PictureBox1.Size = New System.Drawing.Size(255, 60)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'F1_MapaCLientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1705, 902)
+        Me.ClientSize = New System.Drawing.Size(1235, 609)
         Me.Controls.Add(Me.PanelPrincipal)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F1_MapaCLientes"
         Me.Text = "F1_MapaCLientes"
         Me.PanelPrincipal.ResumeLayout(False)
@@ -688,7 +635,6 @@ Partial Class F1_MapaCLientes
     Friend WithEvents lbdireccion As System.Windows.Forms.TextBox
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents cbZona As Janus.Windows.GridEX.EditControls.MultiColumnCombo
-    Friend WithEvents btnSalir As DevComponents.DotNetBar.ButtonX
     Friend WithEvents slpanelInfo As DevComponents.DotNetBar.Controls.SlidePanel
     Friend WithEvents lbmap As DevComponents.DotNetBar.Controls.ReflectionLabel
     Friend WithEvents btnz2 As DevComponents.DotNetBar.ButtonX

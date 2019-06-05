@@ -29,7 +29,7 @@ Public Class F0_Libreria
     Private Sub _IniciarTodo()
 
         'L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
         _prCargarComboLibreria(cbPrograma)
         _prAsignarPermisos()
         Me.Text = "LIBRERIAS"
@@ -176,7 +176,7 @@ Public Class F0_Libreria
 
         With grLibreria.RootTable.Columns("ycdes3")
             .Caption = "DESCRIPCION"
-            .Width = 200
+            .Width = 350
             .Visible = True
             .MaxLength = 40
 

@@ -31,7 +31,7 @@ Public Class F0_Compra
         'L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         _prCargarComboLibreriaSucursal(cbSucursal)
         _prObtenerPorcentajeUtilidad()
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
         _prCargarCompra()
         _prInhabiliitar()
         grCompra.Focus()

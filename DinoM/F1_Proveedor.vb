@@ -38,7 +38,7 @@ Public Class F1_Proveedor
 
     Private Sub _prIniciarTodo()
 
-        Me.Text = "CLIENTES"
+        Me.Text = "PROVEEDOR"
         _prInicarMapa()
 
         _prMaxLength()
@@ -676,6 +676,7 @@ Public Class F1_Proveedor
 
     Private Sub F1_Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _prIniciarTodo()
+        SuperTabControl1.SelectedTabIndex = 1
 
     End Sub
 

@@ -41,7 +41,7 @@ Public Class F0_Ventas
     Private Sub _IniciarTodo()
         'L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         MSuperTabControl.SelectedTabIndex = 0
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
 
 
         _prValidarLote()

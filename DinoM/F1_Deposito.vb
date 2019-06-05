@@ -523,6 +523,7 @@ Public Class F1_Deposito
 
     Private Sub F1_Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _prIniciarTodo()
+        SuperTabControl1.SelectedTabIndex = 0
 
     End Sub
 

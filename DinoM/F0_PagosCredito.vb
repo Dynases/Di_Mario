@@ -35,7 +35,7 @@ Public Class F0_PagosCredito
         'L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         _prCargarComboLibreria(cbbanco, 6, 1)
 
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
         _prAsignarPermisos()
         Me.Text = "NOTAS DE COBRANZAS"
         Dim blah As New Bitmap(New Bitmap(My.Resources.cobro), 20, 20)
@@ -274,7 +274,7 @@ Public Class F0_PagosCredito
         End With
         With grfactura.RootTable.Columns("PagoAc")
             .Caption = "Total Cobrado"
-            .Width = 180
+            .Width = 140
             .FormatString = "0.00"
             .TextAlignment = TextAlignment.Far
             .AggregateFunction = AggregateFunction.Sum
@@ -1187,7 +1187,7 @@ Public Class F0_PagosCredito
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-
+        'Me.Close()
         _prSalir()
     End Sub
     Private Sub _prSalir()
@@ -1264,17 +1264,8 @@ Public Class F0_PagosCredito
         grfactura.Select()
     End Sub
 
-    Private Sub F0_PagosCredito_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        'MessageBox.Show("Adios")
-        '_tab.Close()
-        '_modulo.Select()
-        If MessageBox.Show(
-         "¿Desea cerrar el formulario?", "Cerrar el formulario",
-         MessageBoxButtons.YesNo) = DialogResult.No Then
+    Private Sub F0_PagosCredito_FormClosing(sender As Object, e As FormClosingEventArgs)
 
-            ' Cancelamos el cierre del formulario
-            e.Cancel = True
-        End If
     End Sub
 
 

@@ -18,7 +18,7 @@ Public Class F0_Usuarios
     Private Sub _PIniciarTodo()
 
         Me.Text = "USUARIOS"
-        Me.WindowState = FormWindowState.Maximized
+        'Me.WindowState = FormWindowState.Maximized
 
         _PCargarComboRol(JMC_Categoria)
         _prCargarComboSucursal()
@@ -28,8 +28,6 @@ Public Class F0_Usuarios
         _PInhabilitar()
 
         _PHabilitarFocus()
-
-
 
         _pCambiarFuente()
 

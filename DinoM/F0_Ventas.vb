@@ -2288,8 +2288,11 @@ salirIf:
                 ToastNotification.Show(Me, "La Venta no puede ser MODIFICADA porque ya tiene pagos".ToUpper, img, 5000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                 _prInhabiliitarModElim()
 
+            Else
+                _prhabilitar()
             End If
         End If
+
     End Sub
 
 

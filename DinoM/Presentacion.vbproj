@@ -533,11 +533,29 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Reporte\R_NotaVenta.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_NotaVenta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reporte\R_PreImpresaCompleta.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>R_PreImpresaCompleta.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporte\R_ProformaCompletaCopia3.vb">
+      <DependentUpon>R_ProformaCompletaCopia3.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reporte\R_ProformaCompleta - Copia %282%29.vb">
+      <DependentUpon>R_ProformaCompleta - Copia %282%29.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Reporte\R_ProformaCompleta - Copia.vb">
       <DependentUpon>R_ProformaCompleta - Copia.rpt</DependentUpon>
@@ -1009,9 +1027,21 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>R_MorosidadCreditoporAlmacen.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\R_NotaVenta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_NotaVenta.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reporte\R_PreImpresaCompleta.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>R_PreImpresaCompleta.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\R_ProformaCompletaCopia3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_ProformaCompletaCopia3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\R_ProformaCompleta - Copia %282%29.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_ProformaCompleta - Copia %282%29.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte\R_ProformaCompleta - Copia.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

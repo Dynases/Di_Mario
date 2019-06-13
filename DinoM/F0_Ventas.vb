@@ -46,11 +46,13 @@ Public Class F0_Ventas
 
         _prValidarLote()
         _prCargarComboLibreriaSucursal(cbSucursal)
+        cbSucursal.SelectedIndex = 0
         lbTipoMoneda.Visible = False
         swMoneda.Visible = False
         P_prCargarVariablesIndispensables()
         _prCargarVenta()
         _prInhabiliitar()
+
         grVentas.Focus()
         Me.Text = "VENTAS"
         Dim blah As New Bitmap(New Bitmap(My.Resources.compra), 20, 20)
@@ -61,7 +63,6 @@ Public Class F0_Ventas
         _prValidadFactura()
         _prCargarNameLabel()
         btnNuevo.PerformClick()
-
     End Sub
 
     Public Sub _prCargarNameLabel()
@@ -92,7 +93,7 @@ Public Class F0_Ventas
             Else
                 Lote = False
             End If
-           
+
         End If
     End Sub
     Private Sub _prCargarComboLibreriaSucursal(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo)
@@ -319,7 +320,9 @@ Public Class F0_Ventas
             swMoneda.Value = .GetValue("tamon")
             tbObservacion.Text = .GetValue("taobs")
             Dim fecha As Date = .GetValue("tafdoc")
-            tbnrodoc.Text = .GetValue("tanumi").ToString + "-" + Str(fecha.Year)
+            Dim FechaString As String = Str(fecha.Year)
+            Dim subFecha As String = Microsoft.VisualBasic.Right(FechaString, 2)
+            tbnrodoc.Text = .GetValue("tanumi").ToString + "-" + subFecha
 
             Dim proforma As Integer = IIf(IsDBNull(.GetValue("taproforma")), 0, .GetValue("taproforma"))
             If (proforma = 0) Then
@@ -335,25 +338,25 @@ Public Class F0_Ventas
 
             'If (gb_FacturaEmite) Then
             Dim dt As DataTable = L_fnObtenerTabla("TFV001", "fvanitcli, fvadescli1, fvadescli2, fvaautoriz, fvanfac, fvaccont, fvafec", "fvanumi=" + tbCodigo.Text.Trim)
-                If (dt.Rows.Count = 1) Then
+            If (dt.Rows.Count = 1) Then
                 'TbNit.Text = dt.Rows(0).Item("fvanitcli").ToString
                 'TbNombre1.Text = dt.Rows(0).Item("fvadescli1").ToString
                 'TbNombre2.Text = dt.Rows(0).Item("fvadescli2").ToString
 
                 tbNroAutoriz.Text = dt.Rows(0).Item("fvaautoriz").ToString
-                    tbNroFactura.Text = dt.Rows(0).Item("fvanfac").ToString
-                    tbCodigoControl.Text = dt.Rows(0).Item("fvaccont").ToString
-                    dtiFechaFactura.Value = dt.Rows(0).Item("fvafec")
-                Else
+                tbNroFactura.Text = dt.Rows(0).Item("fvanfac").ToString
+                tbCodigoControl.Text = dt.Rows(0).Item("fvaccont").ToString
+                dtiFechaFactura.Value = dt.Rows(0).Item("fvafec")
+            Else
                 'TbNit.Clear()
                 'TbNombre1.Clear()
                 'TbNombre2.Clear()
 
                 tbNroAutoriz.Clear()
-                    tbNroFactura.Clear()
-                    tbCodigoControl.Clear()
-                    dtiFechaFactura.Value = "2000/01/01"
-                End If
+                tbNroFactura.Clear()
+                tbCodigoControl.Clear()
+                dtiFechaFactura.Value = "2000/01/01"
+            End If
             'End If
 
             lbFecha.Text = CType(.GetValue("tafact"), Date).ToString("dd/MM/yyyy")
@@ -978,7 +981,7 @@ Public Class F0_Ventas
         Return False
     End Function
 
-    Public Function _fnExisteProductoConLote(idprod As Integer,lote As String , fechaVenci as date) As Boolean
+    Public Function _fnExisteProductoConLote(idprod As Integer, lote As String, fechaVenci As Date) As Boolean
         For i As Integer = 0 To CType(grdetalle.DataSource, DataTable).Rows.Count - 1 Step 1
             Dim _idprod As Integer = CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbty5prod")
             Dim estado As Integer = CType(grdetalle.DataSource, DataTable).Rows(i).Item("estado")
@@ -1082,7 +1085,7 @@ Public Class F0_Ventas
     End Sub
     Public Function _ValidarCampos() As Boolean
         If (_CodCliente <= 0) Then
-            Dim img As Bitmap = New Bitmap(My.Resources.Mensaje, 50, 50)
+            Dim img As Bitmap = New Bitmap(My.Resources.mensaje, 50, 50)
             ToastNotification.Show(Me, "Por Favor Seleccione un Cliente con Ctrl+Enter".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
             tbCliente.Focus()
             Return False
@@ -1100,7 +1103,7 @@ Public Class F0_Ventas
             Return False
         End If
         If (cbSucursal.SelectedIndex < 0) Then
-            Dim img As Bitmap = New Bitmap(My.Resources.Mensaje, 50, 50)
+            Dim img As Bitmap = New Bitmap(My.Resources.mensaje, 50, 50)
             ToastNotification.Show(Me, "Por Favor Seleccione una Sucursal".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
             cbSucursal.Focus()
             Return False
@@ -1421,6 +1424,7 @@ Public Class F0_Ventas
     End Function
     Private Sub P_GenerarReporte(numi As String)
         Dim dt As DataTable = L_fnVentaNotaDeVenta(numi)
+
         'Dim total As Double = dt.Compute("SUM(Total)", "")
         'Dim totald As Double = (total / 6.96)
         'Dim fechaven As String = dt.Rows(0).Item("fechaventa")
@@ -1465,7 +1469,7 @@ Public Class F0_Ventas
         If (Lote = True) Then
 
             Dim dt4 As DataTable = L_fnVentaNotaDeVenta(numi)
-            Dim objrep As New R_ProformaCompleta___Copia
+            Dim objrep As New R_ProformaCompleta___Copia_2
             If PrintDialog1.ShowDialog = DialogResult.OK Then
 
                 'objrep.Subreports.Item("R_ProformaPreImpresa.rpt").SetDataSource(dt4)
@@ -1492,9 +1496,34 @@ Public Class F0_Ventas
         Else
 
             Dim dt4 As DataTable = L_fnVentaNotaDeVenta(numi)
-            Dim objrep As New R_ProformaCompleta___Copia
-            If PrintDialog1.ShowDialog = DialogResult.OK Then
+            'Dim NumFilas = dt4.Rows.Count
+            ''Dim Aux As String = "Auxiliar"
+            ''Dim columna = New DataColumn(Aux)
+            ''dt4.Columns.Add(columna)
+            'For i As Integer = NumFilas To 9
+            '    Dim row As DataRow = dt4.NewRow()
+            '    row("producto") = "Z"
+            '    dt4.Rows.Add(row)
+            'Next
 
+
+            Dim objrep As New R_ProformaCompleta___Copia_2
+
+            If PrintDialog1.ShowDialog = DialogResult.OK Then
+                Dim NumFilas = dt4.Rows.Count
+                For i As Integer = NumFilas To 9
+                    Dim row As DataRow = dt4.NewRow()
+                    'Dim aux As DataRow = dt4.Rows(i).Item("TotalSub")
+                    row("producto") = "ZZZZ"
+                    row("FechaCredito") = dt4.Rows(i - 1).Item("FechaCredito")
+                    row("TotalSub") = dt4.Rows(i - 1).Item("TotalSub")
+                    row("porcentajeDescuento") = dt4.Rows(i - 1).Item("porcentajeDescuento")
+                    row("Descuento") = dt4.Rows(i - 1).Item("Descuento")
+                    row("Total") = dt4.Rows(i - 1).Item("Total")
+
+                    dt4.Rows.Add(row)
+
+                Next
                 'objrep.Subreports.Item("R_ProformaPreImpresa.rpt").SetDataSource(dt4)
                 objrep.SetDataSource(dt4)
                 objrep.PrintOptions.PrinterName = PrintDialog1.PrinterSettings.PrinterName
@@ -1658,6 +1687,7 @@ Public Class F0_Ventas
 #Region "Eventos Formulario"
     Private Sub F0_Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _IniciarTodo()
+
     End Sub
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         _Limpiar()
@@ -2744,6 +2774,10 @@ salirIf:
 
     Private Sub tbSubTotal_ValueChanged(sender As Object, e As EventArgs) Handles tbSubTotal.ValueChanged
 
+    End Sub
+
+    Private Sub grVentas_DoubleClick(sender As Object, e As EventArgs) Handles grVentas.DoubleClick
+        MSuperTabControl.SelectedTabIndex = 0
     End Sub
 
 

@@ -330,7 +330,7 @@ Partial Class F0_Ventas
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 498.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 530.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1251, 530)
         Me.TableLayoutPanel1.TabIndex = 1
         '
@@ -522,7 +522,7 @@ Partial Class F0_Ventas
         Me.tbcodigovendedor.Name = "tbcodigovendedor"
         Me.tbcodigovendedor.PreventEnterBeep = True
         Me.tbcodigovendedor.Size = New System.Drawing.Size(43, 22)
-        Me.tbcodigovendedor.TabIndex = 2
+        Me.tbcodigovendedor.TabIndex = 1
         Me.tbcodigovendedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbnrocod
@@ -538,7 +538,7 @@ Partial Class F0_Ventas
         Me.tbnrocod.Name = "tbnrocod"
         Me.tbnrocod.PreventEnterBeep = True
         Me.tbnrocod.Size = New System.Drawing.Size(43, 22)
-        Me.tbnrocod.TabIndex = 1
+        Me.tbnrocod.TabIndex = 2
         Me.tbnrocod.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbvendedores
@@ -878,7 +878,7 @@ Partial Class F0_Ventas
         Me.lbTipoMoneda.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.lbTipoMoneda.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbTipoMoneda.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.lbTipoMoneda.Location = New System.Drawing.Point(482, 46)
+        Me.lbTipoMoneda.Location = New System.Drawing.Point(482, 147)
         Me.lbTipoMoneda.Name = "lbTipoMoneda"
         Me.lbTipoMoneda.SingleLineColor = System.Drawing.SystemColors.Control
         Me.lbTipoMoneda.Size = New System.Drawing.Size(129, 23)
@@ -892,7 +892,7 @@ Partial Class F0_Ventas
         '
         Me.swMoneda.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.swMoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.swMoneda.Location = New System.Drawing.Point(639, 46)
+        Me.swMoneda.Location = New System.Drawing.Point(639, 147)
         Me.swMoneda.Name = "swMoneda"
         Me.swMoneda.OffBackColor = System.Drawing.Color.LawnGreen
         Me.swMoneda.OffText = "DOLAR"
@@ -913,7 +913,7 @@ Partial Class F0_Ventas
         Me.lbCredito.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.lbCredito.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCredito.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.lbCredito.Location = New System.Drawing.Point(482, 110)
+        Me.lbCredito.Location = New System.Drawing.Point(482, 79)
         Me.lbCredito.Name = "lbCredito"
         Me.lbCredito.SingleLineColor = System.Drawing.SystemColors.Control
         Me.lbCredito.Size = New System.Drawing.Size(156, 23)
@@ -929,7 +929,7 @@ Partial Class F0_Ventas
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX5.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX5.Location = New System.Drawing.Point(483, 137)
+        Me.LabelX5.Location = New System.Drawing.Point(482, 46)
         Me.LabelX5.Name = "LabelX5"
         Me.LabelX5.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX5.Size = New System.Drawing.Size(129, 23)
@@ -963,7 +963,7 @@ Partial Class F0_Ventas
         Me.tbFechaVenc.ButtonDropDown.Visible = True
         Me.tbFechaVenc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbFechaVenc.IsPopupCalendarOpen = False
-        Me.tbFechaVenc.Location = New System.Drawing.Point(640, 108)
+        Me.tbFechaVenc.Location = New System.Drawing.Point(640, 78)
         '
         '
         '
@@ -1005,7 +1005,7 @@ Partial Class F0_Ventas
         '
         Me.swTipoVenta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.swTipoVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.swTipoVenta.Location = New System.Drawing.Point(639, 136)
+        Me.swTipoVenta.Location = New System.Drawing.Point(638, 45)
         Me.swTipoVenta.Name = "swTipoVenta"
         Me.swTipoVenta.OffBackColor = System.Drawing.Color.LawnGreen
         Me.swTipoVenta.OffText = "CREDITO"
@@ -1143,7 +1143,7 @@ Partial Class F0_Ventas
         Me.tbCliente.Name = "tbCliente"
         Me.tbCliente.PreventEnterBeep = True
         Me.tbCliente.Size = New System.Drawing.Size(249, 22)
-        Me.tbCliente.TabIndex = 1
+        Me.tbCliente.TabIndex = 244
         '
         'LabelX2
         '

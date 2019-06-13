@@ -123,7 +123,7 @@ Partial Class F1_Productos
         Me.SuperTabPrincipal.ControlBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabPrincipal.ControlBox.MenuBox, Me.SuperTabPrincipal.ControlBox.CloseBox})
         Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(4)
-        Me.SuperTabPrincipal.Size = New System.Drawing.Size(1284, 641)
+        Me.SuperTabPrincipal.Size = New System.Drawing.Size(1284, 681)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
         '
@@ -135,7 +135,7 @@ Partial Class F1_Productos
         'SuperTabControlPanelRegistro
         '
         Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(4)
-        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1252, 641)
+        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1252, 681)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelPrincipal, 0)
@@ -159,7 +159,7 @@ Partial Class F1_Productos
         '
         'PanelInferior
         '
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 605)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 645)
         Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelInferior.Size = New System.Drawing.Size(1252, 36)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
@@ -224,14 +224,14 @@ Partial Class F1_Productos
         'PanelPrincipal
         '
         Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1252, 533)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(1252, 573)
         '
         'GroupPanelBuscador
         '
         Me.GroupPanelBuscador.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 329)
         Me.GroupPanelBuscador.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupPanelBuscador.Size = New System.Drawing.Size(1252, 204)
+        Me.GroupPanelBuscador.Size = New System.Drawing.Size(1252, 244)
         '
         '
         '
@@ -286,7 +286,7 @@ Partial Class F1_Productos
         Me.JGrM_Buscador.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
         Me.JGrM_Buscador.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.JGrM_Buscador.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
-        Me.JGrM_Buscador.Size = New System.Drawing.Size(1246, 181)
+        Me.JGrM_Buscador.Size = New System.Drawing.Size(1246, 221)
         Me.JGrM_Buscador.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
         'PanelUsuario
@@ -1047,7 +1047,7 @@ Partial Class F1_Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1284, 641)
+        Me.ClientSize = New System.Drawing.Size(1284, 681)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F1_Productos"
         Me.Text = "F1_Productos"

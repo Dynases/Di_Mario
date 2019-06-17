@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class F0_Ventas
     Inherits Modelo.ModeloF0
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class F0_Ventas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F0_Ventas))
         Dim cbSucursal_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
@@ -522,7 +522,7 @@ Partial Class F0_Ventas
         Me.tbcodigovendedor.Name = "tbcodigovendedor"
         Me.tbcodigovendedor.PreventEnterBeep = True
         Me.tbcodigovendedor.Size = New System.Drawing.Size(43, 22)
-        Me.tbcodigovendedor.TabIndex = 1
+        Me.tbcodigovendedor.TabIndex = 0
         Me.tbcodigovendedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbnrocod
@@ -538,7 +538,7 @@ Partial Class F0_Ventas
         Me.tbnrocod.Name = "tbnrocod"
         Me.tbnrocod.PreventEnterBeep = True
         Me.tbnrocod.Size = New System.Drawing.Size(43, 22)
-        Me.tbnrocod.TabIndex = 2
+        Me.tbnrocod.TabIndex = 1
         Me.tbnrocod.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbvendedores
@@ -589,7 +589,7 @@ Partial Class F0_Ventas
         Me.SwProforma.OnText = "SI"
         Me.SwProforma.Size = New System.Drawing.Size(68, 22)
         Me.SwProforma.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.SwProforma.TabIndex = 0
+        Me.SwProforma.TabIndex = 244
         Me.SwProforma.Value = True
         Me.SwProforma.ValueObject = "Y"
         '
@@ -625,7 +625,7 @@ Partial Class F0_Ventas
         Me.tbProforma.Name = "tbProforma"
         Me.tbProforma.PreventEnterBeep = True
         Me.tbProforma.Size = New System.Drawing.Size(112, 22)
-        Me.tbProforma.TabIndex = 239
+        Me.tbProforma.TabIndex = 245
         '
         'LabelX17
         '
@@ -655,7 +655,7 @@ Partial Class F0_Ventas
         Me.cbSucursal.SelectedIndex = -1
         Me.cbSucursal.SelectedItem = Nothing
         Me.cbSucursal.Size = New System.Drawing.Size(164, 22)
-        Me.cbSucursal.TabIndex = 0
+        Me.cbSucursal.TabIndex = 246
         Me.cbSucursal.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
         'GroupPanelFactura2
@@ -900,7 +900,7 @@ Partial Class F0_Ventas
         Me.swMoneda.OnText = "BOLIVIANO"
         Me.swMoneda.Size = New System.Drawing.Size(135, 22)
         Me.swMoneda.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.swMoneda.TabIndex = 6
+        Me.swMoneda.TabIndex = 8
         Me.swMoneda.Value = True
         Me.swMoneda.ValueObject = "Y"
         '
@@ -996,7 +996,7 @@ Partial Class F0_Ventas
         Me.tbFechaVenc.Name = "tbFechaVenc"
         Me.tbFechaVenc.Size = New System.Drawing.Size(120, 22)
         Me.tbFechaVenc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.tbFechaVenc.TabIndex = 6
+        Me.tbFechaVenc.TabIndex = 7
         '
         'swTipoVenta
         '
@@ -1013,7 +1013,7 @@ Partial Class F0_Ventas
         Me.swTipoVenta.OnText = "CONTADO"
         Me.swTipoVenta.Size = New System.Drawing.Size(135, 22)
         Me.swTipoVenta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.swTipoVenta.TabIndex = 8
+        Me.swTipoVenta.TabIndex = 6
         Me.swTipoVenta.Value = True
         Me.swTipoVenta.ValueObject = "Y"
         '
@@ -1174,7 +1174,7 @@ Partial Class F0_Ventas
         Me.tbCodigo.Name = "tbCodigo"
         Me.tbCodigo.PreventEnterBeep = True
         Me.tbCodigo.Size = New System.Drawing.Size(63, 22)
-        Me.tbCodigo.TabIndex = 0
+        Me.tbCodigo.TabIndex = 243
         Me.tbCodigo.TabStop = False
         Me.tbCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.tbCodigo.Visible = False
@@ -1254,7 +1254,7 @@ Partial Class F0_Ventas
         Me.grdetalle.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grdetalle.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.grdetalle.Size = New System.Drawing.Size(1013, 296)
-        Me.grdetalle.TabIndex = 0
+        Me.grdetalle.TabIndex = 3
         Me.grdetalle.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
         'Panel4

@@ -63,6 +63,7 @@ Public Class F0_Ventas
         _prValidadFactura()
         _prCargarNameLabel()
         btnNuevo.PerformClick()
+        'tbcodigovendedor.Focus()
     End Sub
 
     Public Sub _prCargarNameLabel()

@@ -64,6 +64,7 @@ Public Class F0_Ventas
         _prCargarNameLabel()
         btnNuevo.PerformClick()
         'tbcodigovendedor.Focus()
+
     End Sub
 
     Public Sub _prCargarNameLabel()
@@ -2779,6 +2780,10 @@ salirIf:
 
     Private Sub grVentas_DoubleClick(sender As Object, e As EventArgs) Handles grVentas.DoubleClick
         MSuperTabControl.SelectedTabIndex = 0
+    End Sub
+
+    Private Sub F0_Ventas_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        tbcodigovendedor.Focus()
     End Sub
 
 

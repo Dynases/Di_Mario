@@ -141,7 +141,7 @@ Partial Class F0_Precios
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.ReadOnly = True
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         Me.TxtNombreUsu.Text = "DEFAULT"
@@ -167,7 +167,7 @@ Partial Class F0_Precios
         '
         Me.PanelToolBar2.Controls.Add(Me.btExcel)
         Me.PanelToolBar2.Location = New System.Drawing.Point(1084, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelToolBar2.Size = New System.Drawing.Size(200, 72)
         Me.PanelToolBar2.Controls.SetChildIndex(Me.btnImprimir, 0)
         Me.PanelToolBar2.Controls.SetChildIndex(Me.btExcel, 0)
@@ -184,7 +184,7 @@ Partial Class F0_Precios
         '
         Me.btnImprimir.Dock = System.Windows.Forms.DockStyle.Right
         Me.btnImprimir.Location = New System.Drawing.Point(140, 0)
-        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnImprimir.Size = New System.Drawing.Size(60, 72)
         Me.btnImprimir.Visible = False
         '
@@ -206,7 +206,7 @@ Partial Class F0_Precios
         '
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2)
         Me.MRlAccion.Size = New System.Drawing.Size(708, 72)
         '
         'PanelContent
@@ -247,7 +247,7 @@ Partial Class F0_Precios
         'PictureBox1
         '
         Me.PictureBox1.Location = New System.Drawing.Point(820, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         '
         'PanelCategoria
         '
@@ -754,7 +754,7 @@ Partial Class F0_Precios
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1284, 641)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F0_Precios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "F0_Precios"

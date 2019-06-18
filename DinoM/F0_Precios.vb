@@ -525,7 +525,7 @@ Public Class F0_Precios
         End If
         If (_fnAccesible() And IsNothing(grprecio.DataSource) = False) Then
             'Deshabilitar la columna de Productos y solo habilitar la de los precios
-            If (e.Column.Index = grprecio.RootTable.Columns("yfcdprod1").Index) Then 'Or e.Column.Index = grprecio.RootTable.Columns("73").Index
+            If (e.Column.Index = grprecio.RootTable.Columns("yfcdprod1").Index) Or (e.Column.Index = grprecio.RootTable.Columns("yfcprod").Index) Then 'Or e.Column.Index = grprecio.RootTable.Columns("73").Index
                 e.Cancel = True
             Else
                 e.Cancel = False

@@ -36,6 +36,7 @@ Public Class F0_MCompras
         grCompra.Focus()
         _prAsignarPermisos()
         Me.Text = "COMPRAS"
+
     End Sub
     Public Sub _prValidarLote()
         Dim dt As DataTable = L_fnPorcUtilidad()
@@ -465,7 +466,7 @@ Public Class F0_MCompras
         With grCompra.RootTable.Columns("moneda")
             .Width = 150
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near
-            .Visible = True
+            .Visible = False
             .Caption = "MONEDA"
         End With
         With grCompra.RootTable.Columns("caobs")
@@ -852,6 +853,7 @@ Public Class F0_MCompras
 #Region "Eventos Formulario"
     Private Sub F0_Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _IniciarTodo()
+
 
     End Sub
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click

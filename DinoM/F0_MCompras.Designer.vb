@@ -153,7 +153,7 @@ Partial Class F0_MCompras
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.ReadOnly = True
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         Me.TxtNombreUsu.Text = "DEFAULT"
@@ -244,6 +244,7 @@ Partial Class F0_MCompras
         Me.MSuperTabControl.ControlBox.Name = ""
         Me.MSuperTabControl.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MSuperTabControl.ControlBox.MenuBox, Me.MSuperTabControl.ControlBox.CloseBox})
         Me.MSuperTabControl.Controls.Add(Me.SuperTabControlPanel2)
+        Me.MSuperTabControl.SelectedTabIndex = 1
         Me.MSuperTabControl.Size = New System.Drawing.Size(1284, 530)
         Me.MSuperTabControl.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.BUSCADOR})
         Me.MSuperTabControl.Controls.SetChildIndex(Me.MSuperTabControlPanel1, 0)
@@ -842,7 +843,7 @@ Partial Class F0_MCompras
         Me.SuperTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel2.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControlPanel2.Name = "SuperTabControlPanel2"
-        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(952, 450)
+        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(1251, 530)
         Me.SuperTabControlPanel2.TabIndex = 0
         Me.SuperTabControlPanel2.TabItem = Me.BUSCADOR
         '
@@ -859,7 +860,7 @@ Partial Class F0_MCompras
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 450.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(952, 450)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1251, 530)
         Me.TableLayoutPanel1.TabIndex = 2
         '
         'PanelVentas
@@ -870,7 +871,7 @@ Partial Class F0_MCompras
         Me.PanelVentas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelVentas.Location = New System.Drawing.Point(3, 3)
         Me.PanelVentas.Name = "PanelVentas"
-        Me.PanelVentas.Size = New System.Drawing.Size(946, 444)
+        Me.PanelVentas.Size = New System.Drawing.Size(1245, 524)
         Me.PanelVentas.TabIndex = 0
         '
         'GroupPanel2
@@ -883,7 +884,7 @@ Partial Class F0_MCompras
         Me.GroupPanel2.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel2.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(946, 444)
+        Me.GroupPanel2.Size = New System.Drawing.Size(1245, 524)
         '
         '
         '
@@ -923,7 +924,7 @@ Partial Class F0_MCompras
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(940, 421)
+        Me.Panel6.Size = New System.Drawing.Size(1239, 501)
         Me.Panel6.TabIndex = 0
         '
         'grCompra
@@ -945,7 +946,7 @@ Partial Class F0_MCompras
         Me.grCompra.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grCompra.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
         Me.grCompra.SelectOnExpand = False
-        Me.grCompra.Size = New System.Drawing.Size(940, 421)
+        Me.grCompra.Size = New System.Drawing.Size(1239, 501)
         Me.grCompra.TabIndex = 0
         Me.grCompra.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -954,7 +955,7 @@ Partial Class F0_MCompras
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1284, 641)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F0_MCompras"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "F0_MCompras"

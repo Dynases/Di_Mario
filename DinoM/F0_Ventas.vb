@@ -46,7 +46,7 @@ Public Class F0_Ventas
 
         _prValidarLote()
         _prCargarComboLibreriaSucursal(cbSucursal)
-        cbSucursal.SelectedIndex = 0
+        'cbSucursal.SelectedIndex = 0
         lbTipoMoneda.Visible = False
         swMoneda.Visible = False
         P_prCargarVariablesIndispensables()
@@ -62,9 +62,21 @@ Public Class F0_Ventas
         P_prCargarParametro()
         _prValidadFactura()
         _prCargarNameLabel()
-        btnNuevo.PerformClick()
+        'btnNuevo.PerformClick()
         'tbcodigovendedor.Focus()
+        '_prCargarNuevo()
 
+
+    End Sub
+    Public Sub _prCargarNuevo()
+        _Limpiar()
+        _prhabilitar()
+
+        btnNuevo.Enabled = False
+        btnModificar.Enabled = False
+        btnEliminar.Enabled = False
+        btnGrabar.Enabled = True
+        PanelNavegacion.Enabled = False
     End Sub
 
     Public Sub _prCargarNameLabel()
@@ -608,6 +620,12 @@ Public Class F0_Ventas
             .Caption = "NRO. VENTA"
             .Visible = True
 
+        End With
+        With grVentas.RootTable.Columns("codcliente")
+            .Width = 100
+            .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near
+            .Visible = True
+            .Caption = "CODCLIENTE"
         End With
         With grVentas.RootTable.Columns("cliente")
             .Width = 410
@@ -2780,10 +2798,6 @@ salirIf:
 
     Private Sub grVentas_DoubleClick(sender As Object, e As EventArgs) Handles grVentas.DoubleClick
         MSuperTabControl.SelectedTabIndex = 0
-    End Sub
-
-    Private Sub F0_Ventas_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        tbcodigovendedor.Focus()
     End Sub
 
 

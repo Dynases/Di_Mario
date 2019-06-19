@@ -53,7 +53,7 @@ Public Class F0_Ventas
         _prCargarVenta()
         _prInhabiliitar()
 
-        grVentas.Focus()
+        'grVentas.Focus()
         Me.Text = "VENTAS"
         Dim blah As New Bitmap(New Bitmap(My.Resources.compra), 20, 20)
         Dim ico As Icon = Icon.FromHandle(blah.GetHicon())
@@ -1707,7 +1707,6 @@ Public Class F0_Ventas
 #Region "Eventos Formulario"
     Private Sub F0_Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _IniciarTodo()
-
     End Sub
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         _Limpiar()

@@ -163,6 +163,10 @@ Partial Class F0_Libreria
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.Panel1, 0)
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.Visible = False
+        '
         'btnUltimo
         '
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2)

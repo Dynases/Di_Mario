@@ -583,6 +583,7 @@ Public Class F1_Productos
 
     Private Sub F1_Productos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _prIniciarTodo()
+        btnImprimir.Visible = False
     End Sub
 
     Private Function _fnCopiarImagenRutaDefinida() As String

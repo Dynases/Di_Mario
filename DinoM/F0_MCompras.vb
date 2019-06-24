@@ -1367,6 +1367,25 @@ salirIf:
             _prAddDetalleVenta()
         End If
     End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        P_GenerarReporte()
+    End Sub
+    Private Sub P_GenerarReporte()
+        Dim dt As DataTable = L_fnNotaCompras(tbnrocod.Text)
+        If Not IsNothing(P_Global.Visualizador) Then
+            P_Global.Visualizador.Close()
+        End If
+
+        P_Global.Visualizador = New Visualizador
+
+        Dim objrep As New R_ReporteCompra
+        objrep.SetDataSource(dt)
+        objrep.SetParameterValue("usuario", gs_user)
+        P_Global.Visualizador.CrGeneral.ReportSource = objrep 'Comentar
+        P_Global.Visualizador.Show() 'Comentar
+        P_Global.Visualizador.BringToFront() 'Comentar
+    End Sub
 #End Region
 
 

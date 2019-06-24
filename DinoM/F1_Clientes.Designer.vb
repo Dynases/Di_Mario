@@ -281,6 +281,7 @@ Partial Class F1_Clientes
         '
         'btnImprimir
         '
+        Me.btnImprimir.Visible = False
         '
         'btnUltimo
         '

@@ -283,6 +283,10 @@ Partial Class F0_Cobrar_Vendedor
         Me.JGrM_Buscador.Size = New System.Drawing.Size(1246, 212)
         Me.JGrM_Buscador.Visible = False
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.Visible = False
+        '
         'btnUltimo
         '
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(4)

@@ -251,6 +251,10 @@ Partial Class F1_Almacen
         Me.PanelUsuario.Location = New System.Drawing.Point(796, 6)
         Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(4)
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.Visible = False
+        '
         'MPanelUserAct
         '
         Me.MPanelUserAct.Location = New System.Drawing.Point(1052, 0)

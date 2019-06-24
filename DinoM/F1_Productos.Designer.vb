@@ -153,9 +153,9 @@ Partial Class F1_Productos
         Me.PanelSuperior.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelSuperior.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelSuperior.Style.GradientAngle = 90
+        Me.PanelSuperior.Controls.SetChildIndex(Me.ButtonX1, 0)
         Me.PanelSuperior.Controls.SetChildIndex(Me.PanelToolBar1, 0)
         Me.PanelSuperior.Controls.SetChildIndex(Me.PanelToolBar2, 0)
-        Me.PanelSuperior.Controls.SetChildIndex(Me.ButtonX1, 0)
         '
         'PanelInferior
         '
@@ -207,7 +207,7 @@ Partial Class F1_Productos
         'PanelToolBar2
         '
         Me.PanelToolBar2.Controls.Add(Me.btExcel)
-        Me.PanelToolBar2.Location = New System.Drawing.Point(802, 0)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(723, 0)
         Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelToolBar2.Size = New System.Drawing.Size(186, 72)
         Me.PanelToolBar2.Controls.SetChildIndex(Me.btnImprimir, 0)
@@ -1033,7 +1033,7 @@ Partial Class F1_Productos
         Me.ButtonX1.Image = Global.DinoM.My.Resources.Resources.codigobarra
         Me.ButtonX1.ImageFixedSize = New System.Drawing.Size(45, 50)
         Me.ButtonX1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonX1.Location = New System.Drawing.Point(723, 0)
+        Me.ButtonX1.Location = New System.Drawing.Point(1173, 0)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 20)
         Me.ButtonX1.Size = New System.Drawing.Size(79, 72)

@@ -166,6 +166,10 @@ Partial Class F0_Movimiento
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.Panel1, 0)
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.Visible = False
+        '
         'btnUltimo
         '
         '

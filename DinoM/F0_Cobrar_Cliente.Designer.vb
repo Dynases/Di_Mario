@@ -82,14 +82,14 @@ Partial Class F0_Cobrar_Cliente
         Me.SuperTabPrincipal.ControlBox.MenuBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabPrincipal.ControlBox.MenuBox, Me.SuperTabPrincipal.ControlBox.CloseBox})
-        Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabPrincipal.Size = New System.Drawing.Size(1284, 641)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
         '
         'SuperTabControlPanelBuscador
         '
-        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1252, 631)
         '
         'SupTabItemBusqueda
@@ -98,7 +98,7 @@ Partial Class F0_Cobrar_Cliente
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1252, 641)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
@@ -108,7 +108,7 @@ Partial Class F0_Cobrar_Cliente
         '
         Me.PanelSuperior.Controls.Add(Me.ButtonX2)
         Me.PanelSuperior.Controls.Add(Me.ButtonX1)
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSuperior.Size = New System.Drawing.Size(1252, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
@@ -126,7 +126,7 @@ Partial Class F0_Cobrar_Cliente
         'PanelInferior
         '
         Me.PanelInferior.Location = New System.Drawing.Point(0, 605)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelInferior.Size = New System.Drawing.Size(1252, 36)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
@@ -162,7 +162,7 @@ Partial Class F0_Cobrar_Cliente
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2)
         '
         'btnSalir
         '
@@ -188,7 +188,7 @@ Partial Class F0_Cobrar_Cliente
         'PanelToolBar2
         '
         Me.PanelToolBar2.Location = New System.Drawing.Point(908, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2)
         '
         'MPanelSup
         '
@@ -199,7 +199,7 @@ Partial Class F0_Cobrar_Cliente
         Me.MPanelSup.Controls.Add(Me.tbCodigo)
         Me.MPanelSup.Controls.Add(Me.tbNombre)
         Me.MPanelSup.Controls.Add(Me.LabelX2)
-        Me.MPanelSup.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MPanelSup.Margin = New System.Windows.Forms.Padding(2)
         Me.MPanelSup.Size = New System.Drawing.Size(1252, 184)
         Me.MPanelSup.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.MPanelSup.Controls.SetChildIndex(Me.LabelX2, 0)
@@ -213,7 +213,7 @@ Partial Class F0_Cobrar_Cliente
         'PanelPrincipal
         '
         Me.PanelPrincipal.Controls.Add(Me.Panel1)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelPrincipal.Size = New System.Drawing.Size(1252, 533)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.MPanelSup, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.Panel1, 0)
@@ -222,7 +222,7 @@ Partial Class F0_Cobrar_Cliente
         'GroupPanelBuscador
         '
         Me.GroupPanelBuscador.Controls.Add(Me.gr_detalle)
-        Me.GroupPanelBuscador.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupPanelBuscador.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupPanelBuscador.Size = New System.Drawing.Size(1252, 235)
         '
         '
@@ -262,7 +262,7 @@ Partial Class F0_Cobrar_Cliente
         Me.JGrM_Buscador.AutoEdit = True
         Me.JGrM_Buscador.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.JGrM_Buscador.HeaderFormatStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(127, Byte), Integer))
-        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(2)
         Me.JGrM_Buscador.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.JGrM_Buscador.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.JGrM_Buscador.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
@@ -271,10 +271,14 @@ Partial Class F0_Cobrar_Cliente
         Me.JGrM_Buscador.Size = New System.Drawing.Size(1246, 212)
         Me.JGrM_Buscador.Visible = False
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.Visible = False
+        '
         'MPanelUserAct
         '
         Me.MPanelUserAct.Location = New System.Drawing.Point(1052, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(2)
         '
         'Panel1
         '
@@ -283,7 +287,7 @@ Partial Class F0_Cobrar_Cliente
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 419)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1252, 114)
         Me.Panel1.TabIndex = 20
@@ -299,7 +303,7 @@ Partial Class F0_Cobrar_Cliente
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel2.Location = New System.Drawing.Point(777, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(475, 114)
         Me.Panel2.TabIndex = 6
@@ -536,7 +540,7 @@ Partial Class F0_Cobrar_Cliente
         Me.gr_detalle.HeaderFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
         Me.gr_detalle.HeaderFormatStyle.FontBold = Janus.Windows.GridEX.TriState.[True]
         Me.gr_detalle.Location = New System.Drawing.Point(0, 0)
-        Me.gr_detalle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gr_detalle.Margin = New System.Windows.Forms.Padding(2)
         Me.gr_detalle.Name = "gr_detalle"
         Me.gr_detalle.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.gr_detalle.Office2007CustomColor = System.Drawing.Color.DodgerBlue
@@ -559,7 +563,7 @@ Partial Class F0_Cobrar_Cliente
         Me.ButtonX1.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.ButtonX1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.ButtonX1.Location = New System.Drawing.Point(376, 0)
-        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(80, 72)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -577,7 +581,7 @@ Partial Class F0_Cobrar_Cliente
         Me.ButtonX2.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.ButtonX2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.ButtonX2.Location = New System.Drawing.Point(456, 0)
-        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonX2.Name = "ButtonX2"
         Me.ButtonX2.Size = New System.Drawing.Size(80, 72)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -607,7 +611,7 @@ Partial Class F0_Cobrar_Cliente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1284, 641)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "F0_Cobrar_Cliente"
         Me.Text = "F0_Cobrar_Cliente"
         Me.Controls.SetChildIndex(Me.SuperTabPrincipal, 0)

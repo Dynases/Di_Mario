@@ -190,6 +190,9 @@ Partial Class F0_MCompras
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.Panel1, 0)
         '
+        'btnImprimir
+        '
+        '
         'btnUltimo
         '
         '

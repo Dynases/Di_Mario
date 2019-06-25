@@ -324,8 +324,8 @@ Public Class F0_Ventas
             cbSucursal.Value = .GetValue("taalm")
             tbCodigo.Text = .GetValue("tanumi")
             tbFechaVenta.Value = .GetValue("tafdoc")
-            _CodEmpleado = .GetValue("taven")
-            tbcodigovendedor.Text = _CodEmpleado
+            _CodEmpleado = .GetValue("ydnumi")
+            tbcodigovendedor.Text = .GetValue("taven")
             tbvendedores.Text = .GetValue("vendedor")
             swTipoVenta.Value = .GetValue("tatven")
             _CodCliente = .GetValue("taclpr")
@@ -643,6 +643,10 @@ Public Class F0_Ventas
             .Visible = False
         End With
         With grVentas.RootTable.Columns("taven")
+            .Width = 160
+            .Visible = False
+        End With
+        With grVentas.RootTable.Columns("ydnumi")
             .Width = 160
             .Visible = False
         End With

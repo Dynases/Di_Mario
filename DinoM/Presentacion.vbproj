@@ -388,6 +388,12 @@
     </Compile>
     <Compile Include="Font\Custom.vb" />
     <Compile Include="Migracion\Codigos.vb" />
+    <Compile Include="Migracion\F0_ActualizaVentasDescuentos.Designer.vb">
+      <DependentUpon>F0_ActualizaVentasDescuentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migracion\F0_ActualizaVentasDescuentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Migracion\F0_Migrar.Designer.vb">
       <DependentUpon>F0_Migrar.vb</DependentUpon>
     </Compile>
@@ -953,6 +959,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F1_Zonas.resx">
       <DependentUpon>F1_Zonas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migracion\F0_ActualizaVentasDescuentos.resx">
+      <DependentUpon>F0_ActualizaVentasDescuentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migracion\F0_Migrar.resx">
       <DependentUpon>F0_Migrar.vb</DependentUpon>

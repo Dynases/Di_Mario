@@ -1462,7 +1462,28 @@ Public Class AccesoLogica
 
         Return _Tabla
     End Function
+    Public Shared Function L_fnGrabarModificacionVenta(detalle As DataTable) As Boolean
+        Dim _Tabla As DataTable
+        Dim _resultado As Boolean
+        Dim _listParam As New List(Of Datos.DParametro)
+        '    @tanumi ,@taalm,@tafdoc ,@taven  ,@tatven,
+        '@tafvcr ,@taclpr,@tamon ,@taest  ,@taobs ,@tadesc ,@newFecha,@newHora,@tauact,@taproforma
+        _listParam.Add(New Datos.DParametro("@tipo", 2))
 
+        _listParam.Add(New Datos.DParametro("@tauact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@TV001", "", detalle))
+        _Tabla = D_ProcedimientoConParam("sp_Marco_TV001", _listParam)
+
+
+        If _Tabla.Rows.Count > 0 Then
+
+            _resultado = True
+        Else
+            _resultado = False
+        End If
+
+        Return _resultado
+    End Function
 
     Public Shared Function L_fnGrabarVenta(ByRef _tanumi As String, _taidCorelativo As String, _tafdoc As String, _taven As Integer, _tatven As Integer, _tafvcr As String, _taclpr As Integer,
                                            _tamon As Integer, _taobs As String,
@@ -2493,6 +2514,20 @@ Public Class AccesoLogica
         _listParam.Add(New Datos.DParametro("@tenumi", _numi))
         _listParam.Add(New Datos.DParametro("@tefdoc", _fecha))
         _Tabla = D_ProcedimientoConParam("sp_Mam_TV00121Cheque", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_fnObtenerVentasByFechas(_fechadesde As String, _FechaHasta As String) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 3))
+        '_listParam.Add(New Datos.DParametro("@tduact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@fechai", _fechadesde))
+        _listParam.Add(New Datos.DParametro("@fechaf", _FechaHasta))
+        _Tabla = D_ProcedimientoConParam("sp_Marco_TV001", _listParam)
 
         Return _Tabla
     End Function

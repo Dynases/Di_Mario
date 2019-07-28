@@ -13,7 +13,7 @@ GO
 ------------Ojo el detalle de la identidad comenzara en 1000 para que no haiga datos duplicado con los id que genera el detalle
 
 --drop procedure sp_Mam_TV001
-ALTER PROCEDURE [dbo].[sp_Marco_TV001] (@tipo int,@tanumi int=-1,
+CREATE PROCEDURE [dbo].[sp_Marco_TV001] (@tipo int,@tanumi int=-1,
 @tauact nvarchar(10)='',@TV001 TV001Type ReadOnly,@fechai date=null,@fechaf date=null)
 
 AS

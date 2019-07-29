@@ -272,6 +272,7 @@ Public Class F0_Ventas
         swTipoVenta.Value = False
         _CodCliente = 0
         tbFechaVenta.Value = Now.Date
+        tbFechaVenc.Value = Now.Date
         tbFechaVenc.Visible = True
         lbCredito.Visible = True
         _prCargarDetalleVenta(-1)
@@ -288,8 +289,6 @@ Public Class F0_Ventas
             .Visible = True
         End With
         _prAddDetalleVenta()
-
-
         tbNroAutoriz.Clear()
         tbNroFactura.Clear()
         tbCodigoControl.Clear()

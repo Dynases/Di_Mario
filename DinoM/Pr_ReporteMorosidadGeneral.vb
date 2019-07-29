@@ -10,10 +10,11 @@ Public Class Pr_ReporteMorosidadGeneral
     Dim Vendedor As String = ""
     Public _modulo As SideNavItem
 
+
     Public Sub _prIniciarTodo()
         'L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         _PMIniciarTodo()
-        Me.Text = "INFORME DE MOROSIDAD"
+        Me.Text = "NOTAS POR COBRAR"
         MReportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         _IniciarComponentes()
     End Sub

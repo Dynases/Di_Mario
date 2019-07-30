@@ -23,6 +23,7 @@ Partial Class F0_ActualizaVentasDescuentos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F0_ActualizaVentasDescuentos))
+        Dim tbAlmacen_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Me.tbFechaDesde = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
         Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
         Me.tbFechaHasta = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
@@ -31,6 +32,16 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.gr_detalle = New Janus.Windows.GridEX.GridEX()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
+        Me.tbAlmacen = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
+        Me.tbVendedor = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.CheckTodosAlmacen = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CheckUnaALmacen = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.tbCodAlmacen = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
+        Me.CheckTodosVendedor = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.checkUnaVendedor = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.tbCodigoVendedor = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelRegistro.SuspendLayout()
@@ -50,6 +61,7 @@ Partial Class F0_ActualizaVentasDescuentos
         CType(Me.tbFechaDesde, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbFechaHasta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gr_detalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbAlmacen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SuperTabPrincipal
@@ -169,6 +181,16 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         'MPanelSup
         '
+        Me.MPanelSup.Controls.Add(Me.tbAlmacen)
+        Me.MPanelSup.Controls.Add(Me.tbVendedor)
+        Me.MPanelSup.Controls.Add(Me.CheckTodosAlmacen)
+        Me.MPanelSup.Controls.Add(Me.CheckUnaALmacen)
+        Me.MPanelSup.Controls.Add(Me.tbCodAlmacen)
+        Me.MPanelSup.Controls.Add(Me.LabelX3)
+        Me.MPanelSup.Controls.Add(Me.CheckTodosVendedor)
+        Me.MPanelSup.Controls.Add(Me.checkUnaVendedor)
+        Me.MPanelSup.Controls.Add(Me.tbCodigoVendedor)
+        Me.MPanelSup.Controls.Add(Me.LabelX2)
         Me.MPanelSup.Controls.Add(Me.tbFechaDesde)
         Me.MPanelSup.Controls.Add(Me.LabelX1)
         Me.MPanelSup.Controls.Add(Me.tbFechaHasta)
@@ -181,6 +203,16 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.MPanelSup.Controls.SetChildIndex(Me.tbFechaHasta, 0)
         Me.MPanelSup.Controls.SetChildIndex(Me.LabelX1, 0)
         Me.MPanelSup.Controls.SetChildIndex(Me.tbFechaDesde, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.LabelX2, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.tbCodigoVendedor, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.checkUnaVendedor, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.CheckTodosVendedor, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.LabelX3, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.tbCodAlmacen, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.CheckUnaALmacen, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.CheckTodosAlmacen, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.tbVendedor, 0)
+        Me.MPanelSup.Controls.SetChildIndex(Me.tbAlmacen, 0)
         '
         'PanelPrincipal
         '
@@ -360,7 +392,7 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.Bt1Generar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bt1Generar.Image = Global.DinoM.My.Resources.Resources.list
         Me.Bt1Generar.ImageFixedSize = New System.Drawing.Size(40, 40)
-        Me.Bt1Generar.Location = New System.Drawing.Point(604, 152)
+        Me.Bt1Generar.Location = New System.Drawing.Point(604, 190)
         Me.Bt1Generar.Margin = New System.Windows.Forms.Padding(4)
         Me.Bt1Generar.Name = "Bt1Generar"
         Me.Bt1Generar.Size = New System.Drawing.Size(200, 62)
@@ -445,6 +477,166 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.ButtonX2.Text = "SALIR"
         Me.ButtonX2.TextColor = System.Drawing.Color.White
         '
+        'tbAlmacen
+        '
+        Me.tbAlmacen.BackColor = System.Drawing.Color.Gainsboro
+        tbAlmacen_DesignTimeLayout.LayoutString = resources.GetString("tbAlmacen_DesignTimeLayout.LayoutString")
+        Me.tbAlmacen.DesignTimeLayout = tbAlmacen_DesignTimeLayout
+        Me.tbAlmacen.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbAlmacen.Location = New System.Drawing.Point(127, 124)
+        Me.tbAlmacen.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbAlmacen.Name = "tbAlmacen"
+        Me.tbAlmacen.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
+        Me.tbAlmacen.Office2007CustomColor = System.Drawing.Color.DodgerBlue
+        Me.tbAlmacen.SelectedIndex = -1
+        Me.tbAlmacen.SelectedItem = Nothing
+        Me.tbAlmacen.Size = New System.Drawing.Size(219, 26)
+        Me.tbAlmacen.TabIndex = 262
+        Me.tbAlmacen.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
+        '
+        'tbVendedor
+        '
+        Me.tbVendedor.BackColor = System.Drawing.Color.Gainsboro
+        '
+        '
+        '
+        Me.tbVendedor.Border.Class = "TextBoxBorder"
+        Me.tbVendedor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbVendedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbVendedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.tbVendedor.Location = New System.Drawing.Point(127, 64)
+        Me.tbVendedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbVendedor.Name = "tbVendedor"
+        Me.tbVendedor.PreventEnterBeep = True
+        Me.tbVendedor.Size = New System.Drawing.Size(223, 26)
+        Me.tbVendedor.TabIndex = 261
+        '
+        'CheckTodosAlmacen
+        '
+        '
+        '
+        '
+        Me.CheckTodosAlmacen.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckTodosAlmacen.Location = New System.Drawing.Point(423, 126)
+        Me.CheckTodosAlmacen.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckTodosAlmacen.Name = "CheckTodosAlmacen"
+        Me.CheckTodosAlmacen.Size = New System.Drawing.Size(73, 28)
+        Me.CheckTodosAlmacen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckTodosAlmacen.TabIndex = 260
+        Me.CheckTodosAlmacen.Text = "Todos"
+        '
+        'CheckUnaALmacen
+        '
+        '
+        '
+        '
+        Me.CheckUnaALmacen.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckUnaALmacen.Location = New System.Drawing.Point(356, 126)
+        Me.CheckUnaALmacen.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckUnaALmacen.Name = "CheckUnaALmacen"
+        Me.CheckUnaALmacen.Size = New System.Drawing.Size(59, 28)
+        Me.CheckUnaALmacen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckUnaALmacen.TabIndex = 257
+        Me.CheckUnaALmacen.Text = "Una"
+        '
+        'tbCodAlmacen
+        '
+        '
+        '
+        '
+        Me.tbCodAlmacen.Border.Class = "TextBoxBorder"
+        Me.tbCodAlmacen.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbCodAlmacen.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCodAlmacen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.tbCodAlmacen.Location = New System.Drawing.Point(87, 124)
+        Me.tbCodAlmacen.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbCodAlmacen.Name = "tbCodAlmacen"
+        Me.tbCodAlmacen.PreventEnterBeep = True
+        Me.tbCodAlmacen.Size = New System.Drawing.Size(29, 26)
+        Me.tbCodAlmacen.TabIndex = 259
+        Me.tbCodAlmacen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.tbCodAlmacen.Visible = False
+        '
+        'LabelX3
+        '
+        Me.LabelX3.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX3.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.LabelX3.Location = New System.Drawing.Point(40, 94)
+        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX3.Name = "LabelX3"
+        Me.LabelX3.SingleLineColor = System.Drawing.SystemColors.Control
+        Me.LabelX3.Size = New System.Drawing.Size(99, 28)
+        Me.LabelX3.TabIndex = 258
+        Me.LabelX3.Text = "Almacen:"
+        '
+        'CheckTodosVendedor
+        '
+        '
+        '
+        '
+        Me.CheckTodosVendedor.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckTodosVendedor.Location = New System.Drawing.Point(426, 62)
+        Me.CheckTodosVendedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckTodosVendedor.Name = "CheckTodosVendedor"
+        Me.CheckTodosVendedor.Size = New System.Drawing.Size(73, 28)
+        Me.CheckTodosVendedor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckTodosVendedor.TabIndex = 256
+        Me.CheckTodosVendedor.Text = "Todos"
+        '
+        'checkUnaVendedor
+        '
+        '
+        '
+        '
+        Me.checkUnaVendedor.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.checkUnaVendedor.Location = New System.Drawing.Point(359, 62)
+        Me.checkUnaVendedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.checkUnaVendedor.Name = "checkUnaVendedor"
+        Me.checkUnaVendedor.Size = New System.Drawing.Size(59, 28)
+        Me.checkUnaVendedor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.checkUnaVendedor.TabIndex = 253
+        Me.checkUnaVendedor.Text = "Una"
+        '
+        'tbCodigoVendedor
+        '
+        '
+        '
+        '
+        Me.tbCodigoVendedor.Border.Class = "TextBoxBorder"
+        Me.tbCodigoVendedor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbCodigoVendedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCodigoVendedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.tbCodigoVendedor.Location = New System.Drawing.Point(90, 60)
+        Me.tbCodigoVendedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbCodigoVendedor.Name = "tbCodigoVendedor"
+        Me.tbCodigoVendedor.PreventEnterBeep = True
+        Me.tbCodigoVendedor.Size = New System.Drawing.Size(29, 26)
+        Me.tbCodigoVendedor.TabIndex = 255
+        Me.tbCodigoVendedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.tbCodigoVendedor.Visible = False
+        '
+        'LabelX2
+        '
+        Me.LabelX2.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX2.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.LabelX2.Location = New System.Drawing.Point(43, 30)
+        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX2.Name = "LabelX2"
+        Me.LabelX2.SingleLineColor = System.Drawing.SystemColors.Control
+        Me.LabelX2.Size = New System.Drawing.Size(99, 28)
+        Me.LabelX2.TabIndex = 254
+        Me.LabelX2.Text = "Vendedor:"
+        '
         'F0_ActualizaVentasDescuentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -476,6 +668,7 @@ Partial Class F0_ActualizaVentasDescuentos
         CType(Me.tbFechaDesde, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbFechaHasta, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gr_detalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbAlmacen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -488,4 +681,14 @@ Partial Class F0_ActualizaVentasDescuentos
     Friend WithEvents gr_detalle As Janus.Windows.GridEX.GridEX
     Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents ButtonX2 As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents tbAlmacen As Janus.Windows.GridEX.EditControls.MultiColumnCombo
+    Friend WithEvents tbVendedor As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents CheckTodosAlmacen As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents CheckUnaALmacen As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents tbCodAlmacen As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents LabelX3 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents CheckTodosVendedor As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents checkUnaVendedor As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents tbCodigoVendedor As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents LabelX2 As DevComponents.DotNetBar.LabelX
 End Class

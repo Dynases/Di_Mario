@@ -79,16 +79,23 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.SuperTabPrincipal.ControlBox.MenuBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabPrincipal.ControlBox.MenuBox, Me.SuperTabPrincipal.ControlBox.CloseBox})
+        Me.SuperTabPrincipal.Size = New System.Drawing.Size(1284, 651)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
         '
         'SuperTabControlPanelBuscador
         '
-        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1102, 624)
+        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(2)
+        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1252, 651)
+        '
+        'SupTabItemBusqueda
+        '
+        Me.SupTabItemBusqueda.Visible = False
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1102, 624)
+        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(2)
+        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1252, 651)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelPrincipal, 0)
@@ -97,7 +104,8 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         Me.PanelSuperior.Controls.Add(Me.ButtonX2)
         Me.PanelSuperior.Controls.Add(Me.ButtonX1)
-        Me.PanelSuperior.Size = New System.Drawing.Size(1102, 89)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelSuperior.Size = New System.Drawing.Size(1252, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
         Me.PanelSuperior.Style.BackColor2.Color = System.Drawing.Color.DarkSlateGray
@@ -113,7 +121,9 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         'PanelInferior
         '
-        Me.PanelInferior.Size = New System.Drawing.Size(1102, 44)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 615)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelInferior.Size = New System.Drawing.Size(1252, 36)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.DarkSlateGray
@@ -148,15 +158,17 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(267, 44)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2)
         '
         'PanelToolBar1
         '
-        Me.PanelToolBar1.Size = New System.Drawing.Size(281, 89)
+        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelToolBar1.Size = New System.Drawing.Size(211, 72)
         '
         'btnSalir
         '
-        Me.btnSalir.Size = New System.Drawing.Size(0, 89)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSalir.Size = New System.Drawing.Size(0, 72)
         Me.btnSalir.Visible = False
         '
         'btnGrabar
@@ -177,7 +189,8 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         'PanelToolBar2
         '
-        Me.PanelToolBar2.Location = New System.Drawing.Point(643, 0)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(908, 0)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(2)
         '
         'MPanelSup
         '
@@ -196,7 +209,8 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.MPanelSup.Controls.Add(Me.tbFechaHasta)
         Me.MPanelSup.Controls.Add(Me.Bt1Generar)
         Me.MPanelSup.Controls.Add(Me.LabelX4)
-        Me.MPanelSup.Size = New System.Drawing.Size(1102, 260)
+        Me.MPanelSup.Margin = New System.Windows.Forms.Padding(2)
+        Me.MPanelSup.Size = New System.Drawing.Size(1252, 211)
         Me.MPanelSup.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.MPanelSup.Controls.SetChildIndex(Me.LabelX4, 0)
         Me.MPanelSup.Controls.SetChildIndex(Me.Bt1Generar, 0)
@@ -216,13 +230,15 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1102, 491)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(1252, 543)
         '
         'GroupPanelBuscador
         '
         Me.GroupPanelBuscador.Controls.Add(Me.gr_detalle)
-        Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 260)
-        Me.GroupPanelBuscador.Size = New System.Drawing.Size(1102, 231)
+        Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 211)
+        Me.GroupPanelBuscador.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupPanelBuscador.Size = New System.Drawing.Size(1252, 332)
         '
         '
         '
@@ -259,19 +275,21 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         Me.JGrM_Buscador.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.JGrM_Buscador.HeaderFormatStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(2)
         Me.JGrM_Buscador.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
         Me.JGrM_Buscador.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.JGrM_Buscador.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
-        Me.JGrM_Buscador.Size = New System.Drawing.Size(1096, 204)
+        Me.JGrM_Buscador.Size = New System.Drawing.Size(1246, 309)
         Me.JGrM_Buscador.Visible = False
         '
         'btnUltimo
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(171, 0)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2)
         '
         'MPanelUserAct
         '
-        Me.MPanelUserAct.Location = New System.Drawing.Point(835, 0)
+        Me.MPanelUserAct.Location = New System.Drawing.Point(1052, 0)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(2)
         '
         'tbFechaDesde
         '
@@ -284,8 +302,7 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.tbFechaDesde.ButtonDropDown.Visible = True
         Me.tbFechaDesde.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbFechaDesde.IsPopupCalendarOpen = False
-        Me.tbFechaDesde.Location = New System.Drawing.Point(643, 57)
-        Me.tbFechaDesde.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbFechaDesde.Location = New System.Drawing.Point(482, 46)
         '
         '
         '
@@ -316,7 +333,7 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.tbFechaDesde.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbFechaDesde.MonthCalendar.TodayButtonVisible = True
         Me.tbFechaDesde.Name = "tbFechaDesde"
-        Me.tbFechaDesde.Size = New System.Drawing.Size(160, 26)
+        Me.tbFechaDesde.Size = New System.Drawing.Size(120, 22)
         Me.tbFechaDesde.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.tbFechaDesde.TabIndex = 252
         '
@@ -330,11 +347,10 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX1.Location = New System.Drawing.Point(513, 62)
-        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX1.Location = New System.Drawing.Point(385, 50)
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX1.Size = New System.Drawing.Size(105, 20)
+        Me.LabelX1.Size = New System.Drawing.Size(84, 16)
         Me.LabelX1.TabIndex = 251
         Me.LabelX1.Text = "Fecha Desde:"
         '
@@ -349,8 +365,7 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.tbFechaHasta.ButtonDropDown.Visible = True
         Me.tbFechaHasta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbFechaHasta.IsPopupCalendarOpen = False
-        Me.tbFechaHasta.Location = New System.Drawing.Point(644, 96)
-        Me.tbFechaHasta.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbFechaHasta.Location = New System.Drawing.Point(483, 78)
         '
         '
         '
@@ -381,7 +396,7 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.tbFechaHasta.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbFechaHasta.MonthCalendar.TodayButtonVisible = True
         Me.tbFechaHasta.Name = "tbFechaHasta"
-        Me.tbFechaHasta.Size = New System.Drawing.Size(160, 26)
+        Me.tbFechaHasta.Size = New System.Drawing.Size(120, 22)
         Me.tbFechaHasta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.tbFechaHasta.TabIndex = 250
         '
@@ -392,10 +407,9 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.Bt1Generar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bt1Generar.Image = Global.DinoM.My.Resources.Resources.list
         Me.Bt1Generar.ImageFixedSize = New System.Drawing.Size(40, 40)
-        Me.Bt1Generar.Location = New System.Drawing.Point(604, 190)
-        Me.Bt1Generar.Margin = New System.Windows.Forms.Padding(4)
+        Me.Bt1Generar.Location = New System.Drawing.Point(453, 154)
         Me.Bt1Generar.Name = "Bt1Generar"
-        Me.Bt1Generar.Size = New System.Drawing.Size(200, 62)
+        Me.Bt1Generar.Size = New System.Drawing.Size(150, 50)
         Me.Bt1Generar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bt1Generar.TabIndex = 249
         Me.Bt1Generar.Text = "Generar"
@@ -410,11 +424,10 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX4.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX4.Location = New System.Drawing.Point(511, 100)
-        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX4.Location = New System.Drawing.Point(383, 81)
         Me.LabelX4.Name = "LabelX4"
         Me.LabelX4.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX4.Size = New System.Drawing.Size(103, 20)
+        Me.LabelX4.Size = New System.Drawing.Size(83, 16)
         Me.LabelX4.TabIndex = 248
         Me.LabelX4.Text = "Fecha Hasta:"
         '
@@ -428,7 +441,7 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.gr_detalle.HeaderFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
         Me.gr_detalle.HeaderFormatStyle.FontBold = Janus.Windows.GridEX.TriState.[True]
         Me.gr_detalle.Location = New System.Drawing.Point(0, 0)
-        Me.gr_detalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gr_detalle.Margin = New System.Windows.Forms.Padding(2)
         Me.gr_detalle.Name = "gr_detalle"
         Me.gr_detalle.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.gr_detalle.Office2007CustomColor = System.Drawing.Color.DodgerBlue
@@ -436,7 +449,7 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.gr_detalle.SelectedFormatStyle.BackColor = System.Drawing.Color.Transparent
         Me.gr_detalle.SelectedFormatStyle.ForeColor = System.Drawing.Color.Black
         Me.gr_detalle.SelectedInactiveFormatStyle.BackColor = System.Drawing.Color.Transparent
-        Me.gr_detalle.Size = New System.Drawing.Size(1096, 204)
+        Me.gr_detalle.Size = New System.Drawing.Size(1246, 309)
         Me.gr_detalle.TabIndex = 3
         Me.gr_detalle.TableHeaderFormatStyle.FontBold = Janus.Windows.GridEX.TriState.[True]
         Me.gr_detalle.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
@@ -450,10 +463,10 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.ButtonX1.Image = Global.DinoM.My.Resources.Resources.save
         Me.ButtonX1.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.ButtonX1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonX1.Location = New System.Drawing.Point(281, 0)
-        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonX1.Location = New System.Drawing.Point(211, 0)
+        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(107, 89)
+        Me.ButtonX1.Size = New System.Drawing.Size(80, 72)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 11
         Me.ButtonX1.Text = "GRABAR"
@@ -468,10 +481,10 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.ButtonX2.Image = Global.DinoM.My.Resources.Resources.atras1
         Me.ButtonX2.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.ButtonX2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonX2.Location = New System.Drawing.Point(388, 0)
-        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonX2.Location = New System.Drawing.Point(291, 0)
+        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(107, 89)
+        Me.ButtonX2.Size = New System.Drawing.Size(80, 72)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 12
         Me.ButtonX2.Text = "SALIR"
@@ -483,14 +496,13 @@ Partial Class F0_ActualizaVentasDescuentos
         tbAlmacen_DesignTimeLayout.LayoutString = resources.GetString("tbAlmacen_DesignTimeLayout.LayoutString")
         Me.tbAlmacen.DesignTimeLayout = tbAlmacen_DesignTimeLayout
         Me.tbAlmacen.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAlmacen.Location = New System.Drawing.Point(127, 124)
-        Me.tbAlmacen.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbAlmacen.Location = New System.Drawing.Point(95, 101)
         Me.tbAlmacen.Name = "tbAlmacen"
         Me.tbAlmacen.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.tbAlmacen.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.tbAlmacen.SelectedIndex = -1
         Me.tbAlmacen.SelectedItem = Nothing
-        Me.tbAlmacen.Size = New System.Drawing.Size(219, 26)
+        Me.tbAlmacen.Size = New System.Drawing.Size(164, 22)
         Me.tbAlmacen.TabIndex = 262
         Me.tbAlmacen.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -504,11 +516,10 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.tbVendedor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbVendedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbVendedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbVendedor.Location = New System.Drawing.Point(127, 64)
-        Me.tbVendedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbVendedor.Location = New System.Drawing.Point(95, 52)
         Me.tbVendedor.Name = "tbVendedor"
         Me.tbVendedor.PreventEnterBeep = True
-        Me.tbVendedor.Size = New System.Drawing.Size(223, 26)
+        Me.tbVendedor.Size = New System.Drawing.Size(167, 22)
         Me.tbVendedor.TabIndex = 261
         '
         'CheckTodosAlmacen
@@ -517,10 +528,9 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         '
         Me.CheckTodosAlmacen.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CheckTodosAlmacen.Location = New System.Drawing.Point(423, 126)
-        Me.CheckTodosAlmacen.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckTodosAlmacen.Location = New System.Drawing.Point(317, 102)
         Me.CheckTodosAlmacen.Name = "CheckTodosAlmacen"
-        Me.CheckTodosAlmacen.Size = New System.Drawing.Size(73, 28)
+        Me.CheckTodosAlmacen.Size = New System.Drawing.Size(55, 23)
         Me.CheckTodosAlmacen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.CheckTodosAlmacen.TabIndex = 260
         Me.CheckTodosAlmacen.Text = "Todos"
@@ -531,10 +541,9 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         '
         Me.CheckUnaALmacen.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CheckUnaALmacen.Location = New System.Drawing.Point(356, 126)
-        Me.CheckUnaALmacen.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckUnaALmacen.Location = New System.Drawing.Point(267, 102)
         Me.CheckUnaALmacen.Name = "CheckUnaALmacen"
-        Me.CheckUnaALmacen.Size = New System.Drawing.Size(59, 28)
+        Me.CheckUnaALmacen.Size = New System.Drawing.Size(44, 23)
         Me.CheckUnaALmacen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.CheckUnaALmacen.TabIndex = 257
         Me.CheckUnaALmacen.Text = "Una"
@@ -548,11 +557,10 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.tbCodAlmacen.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCodAlmacen.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCodAlmacen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbCodAlmacen.Location = New System.Drawing.Point(87, 124)
-        Me.tbCodAlmacen.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbCodAlmacen.Location = New System.Drawing.Point(65, 101)
         Me.tbCodAlmacen.Name = "tbCodAlmacen"
         Me.tbCodAlmacen.PreventEnterBeep = True
-        Me.tbCodAlmacen.Size = New System.Drawing.Size(29, 26)
+        Me.tbCodAlmacen.Size = New System.Drawing.Size(22, 22)
         Me.tbCodAlmacen.TabIndex = 259
         Me.tbCodAlmacen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.tbCodAlmacen.Visible = False
@@ -566,11 +574,10 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX3.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX3.Location = New System.Drawing.Point(40, 94)
-        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX3.Location = New System.Drawing.Point(30, 76)
         Me.LabelX3.Name = "LabelX3"
         Me.LabelX3.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX3.Size = New System.Drawing.Size(99, 28)
+        Me.LabelX3.Size = New System.Drawing.Size(74, 23)
         Me.LabelX3.TabIndex = 258
         Me.LabelX3.Text = "Almacen:"
         '
@@ -580,10 +587,9 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         '
         Me.CheckTodosVendedor.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CheckTodosVendedor.Location = New System.Drawing.Point(426, 62)
-        Me.CheckTodosVendedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckTodosVendedor.Location = New System.Drawing.Point(320, 50)
         Me.CheckTodosVendedor.Name = "CheckTodosVendedor"
-        Me.CheckTodosVendedor.Size = New System.Drawing.Size(73, 28)
+        Me.CheckTodosVendedor.Size = New System.Drawing.Size(55, 23)
         Me.CheckTodosVendedor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.CheckTodosVendedor.TabIndex = 256
         Me.CheckTodosVendedor.Text = "Todos"
@@ -594,10 +600,9 @@ Partial Class F0_ActualizaVentasDescuentos
         '
         '
         Me.checkUnaVendedor.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.checkUnaVendedor.Location = New System.Drawing.Point(359, 62)
-        Me.checkUnaVendedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.checkUnaVendedor.Location = New System.Drawing.Point(269, 50)
         Me.checkUnaVendedor.Name = "checkUnaVendedor"
-        Me.checkUnaVendedor.Size = New System.Drawing.Size(59, 28)
+        Me.checkUnaVendedor.Size = New System.Drawing.Size(44, 23)
         Me.checkUnaVendedor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.checkUnaVendedor.TabIndex = 253
         Me.checkUnaVendedor.Text = "Una"
@@ -611,11 +616,10 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.tbCodigoVendedor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCodigoVendedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCodigoVendedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbCodigoVendedor.Location = New System.Drawing.Point(90, 60)
-        Me.tbCodigoVendedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbCodigoVendedor.Location = New System.Drawing.Point(68, 49)
         Me.tbCodigoVendedor.Name = "tbCodigoVendedor"
         Me.tbCodigoVendedor.PreventEnterBeep = True
-        Me.tbCodigoVendedor.Size = New System.Drawing.Size(29, 26)
+        Me.tbCodigoVendedor.Size = New System.Drawing.Size(22, 22)
         Me.tbCodigoVendedor.TabIndex = 255
         Me.tbCodigoVendedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.tbCodigoVendedor.Visible = False
@@ -629,22 +633,21 @@ Partial Class F0_ActualizaVentasDescuentos
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX2.Location = New System.Drawing.Point(43, 30)
-        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelX2.Location = New System.Drawing.Point(32, 24)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX2.Size = New System.Drawing.Size(99, 28)
+        Me.LabelX2.Size = New System.Drawing.Size(74, 23)
         Me.LabelX2.TabIndex = 254
         Me.LabelX2.Text = "Vendedor:"
         '
         'F0_ActualizaVentasDescuentos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1137, 624)
+        Me.ClientSize = New System.Drawing.Size(1284, 651)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "F0_ActualizaVentasDescuentos"
         Me.Text = "F0_ActualizaVentasDescuentos"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Controls.SetChildIndex(Me.SuperTabPrincipal, 0)
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SuperTabPrincipal.ResumeLayout(False)

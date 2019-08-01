@@ -33,7 +33,7 @@ Public Class F0_ActualizaVentasDescuentos
         L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
         'Me.WindowState = FormWindowState.Maximized
         _prAsignarPermisos()
-        Me.Text = "Descuentos Por Ventas"
+        Me.Text = "DESCUENTOS  POR  VENTAS"
         Dim blah As New Bitmap(New Bitmap(My.Resources.cobro), 20, 20)
         Dim ico As Icon = Icon.FromHandle(blah.GetHicon())
         Me.Icon = ico

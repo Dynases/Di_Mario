@@ -3,6 +3,7 @@ Imports Modelo.MGlobal
 Imports DevComponents.DotNetBar.Controls
 Imports DevComponents.DotNetBar.Metro
 Imports DevComponents.DotNetBar
+Imports Janus.Windows.GridEX
 Imports DevComponents.DotNetBar.Rendering
 
 Public Class P_Principal
@@ -36,6 +37,49 @@ Public Class P_Principal
         Dim blah As New Bitmap(New Bitmap(My.Resources.almacen), 20, 20)
         Dim ico As Icon = Icon.FromHandle(blah.GetHicon())
         Me.Icon = ico
+        _prCargarProductos()
+    End Sub
+
+    Private Sub _prCargarProductos()
+        Dim dt As New DataTable
+        dt = L_fnStockActualPrincipal()
+        grProductos.DataSource = dt
+        grProductos.RetrieveStructure()
+        grProductos.AlternatingColors = True
+        '' a.yfnumi  , a.yfcdprod1, Sum(c.iccven) as iccven
+
+
+        With grProductos.RootTable.Columns("yfnumi")
+            .Width = 150
+            .Caption = "COD PRODUCTO"
+            .Visible = True
+
+        End With
+
+        With grProductos.RootTable.Columns("yfcdprod1")
+            .Width = 410
+            .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near
+            .Visible = True
+            .Caption = "PRODUCTO"
+        End With
+
+        With grProductos.RootTable.Columns("iccven")
+            .Width = 160
+            .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
+            .Visible = True
+            .Caption = "STOCK"
+            .FormatString = "0"
+        End With
+        With grProductos
+            .DefaultFilterRowComparison = FilterConditionOperator.BeginsWith
+            .FilterMode = FilterMode.Automatic
+            .FilterRowUpdateMode = FilterRowUpdateMode.WhenValueChanges
+            .GroupByBoxVisible = False
+            'diseño de la grilla
+
+        End With
+
+
     End Sub
     Private Sub _prCambiarStyle()
         'tratar de cambiar estilo

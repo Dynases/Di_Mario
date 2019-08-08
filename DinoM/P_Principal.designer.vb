@@ -244,6 +244,7 @@ Partial Class P_Principal
         Me.SideNav1.Controls.Add(Me.SideNavPanel5)
         Me.SideNav1.Controls.Add(Me.SideNav_Ventas)
         Me.SideNav1.Controls.Add(Me.SideNavPanel7)
+        Me.SideNav1.Controls.Add(Me.SideNav_Ventas)
         Me.SideNav1.Controls.Add(Me.SideNavPanel3)
         Me.SideNav1.Controls.Add(Me.SideNav_Conf)
         Me.SideNav1.Controls.Add(Me.SideNavPanel6)
@@ -538,12 +539,10 @@ Partial Class P_Principal
         '
         Me.SideNavPanel7.Controls.Add(Me.MenuCreditos)
         Me.SideNavPanel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SideNavPanel7.Location = New System.Drawing.Point(189, 44)
-        Me.SideNavPanel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SideNavPanel7.Location = New System.Drawing.Point(142, 36)
         Me.SideNavPanel7.Name = "SideNavPanel7"
-        Me.SideNavPanel7.Size = New System.Drawing.Size(1141, 645)
+        Me.SideNavPanel7.Size = New System.Drawing.Size(856, 524)
         Me.SideNavPanel7.TabIndex = 162
-        Me.SideNavPanel7.Visible = False
         '
         'MenuCreditos
         '
@@ -562,10 +561,9 @@ Partial Class P_Principal
         Me.MenuCreditos.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.btnCredPago, Me.btnCredEstCuenta, Me.btnCredInfMorosidad, Me.btnCredPagoCliente, Me.btnCredPagoClienteVendedor, Me.btnCredPagoResumen})
         Me.MenuCreditos.ItemSpacing = 10
         Me.MenuCreditos.Location = New System.Drawing.Point(0, 0)
-        Me.MenuCreditos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MenuCreditos.MultiLine = True
         Me.MenuCreditos.Name = "MenuCreditos"
-        Me.MenuCreditos.Size = New System.Drawing.Size(1141, 645)
+        Me.MenuCreditos.Size = New System.Drawing.Size(856, 524)
         Me.MenuCreditos.TabIndex = 2
         Me.MenuCreditos.Text = "mtp2Logistica"
         '
@@ -687,10 +685,9 @@ Partial Class P_Principal
         '
         Me.SideNavPanel3.Controls.Add(Me.superTabControl3)
         Me.SideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SideNavPanel3.Location = New System.Drawing.Point(189, 44)
-        Me.SideNavPanel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SideNavPanel3.Location = New System.Drawing.Point(142, 36)
         Me.SideNavPanel3.Name = "SideNavPanel3"
-        Me.SideNavPanel3.Size = New System.Drawing.Size(1141, 645)
+        Me.SideNavPanel3.Size = New System.Drawing.Size(856, 524)
         Me.SideNavPanel3.TabIndex = 73
         Me.SideNavPanel3.Visible = False
         '
@@ -714,12 +711,11 @@ Partial Class P_Principal
         Me.superTabControl3.Controls.Add(Me.PanelPrincipal)
         Me.superTabControl3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.superTabControl3.Location = New System.Drawing.Point(0, 0)
-        Me.superTabControl3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.superTabControl3.Name = "superTabControl3"
         Me.superTabControl3.ReorderTabsEnabled = True
         Me.superTabControl3.SelectedTabFont = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.superTabControl3.SelectedTabIndex = -1
-        Me.superTabControl3.Size = New System.Drawing.Size(1141, 645)
+        Me.superTabControl3.Size = New System.Drawing.Size(856, 524)
         Me.superTabControl3.TabFont = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.superTabControl3.TabIndex = 5
         Me.superTabControl3.TabVerticalSpacing = 3
@@ -730,9 +726,8 @@ Partial Class P_Principal
         Me.PanelPrincipal.BackColor = System.Drawing.SystemColors.Control
         Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelPrincipal.Location = New System.Drawing.Point(0, 0)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelPrincipal.Name = "PanelPrincipal"
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1141, 645)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(856, 524)
         Me.PanelPrincipal.TabIndex = 1
         '
         'SideNav_Conf
@@ -2042,6 +2037,7 @@ Partial Class P_Principal
         '
         'FP_CREDITOS
         '
+        Me.FP_CREDITOS.Checked = True
         Me.FP_CREDITOS.Name = "FP_CREDITOS"
         Me.FP_CREDITOS.Panel = Me.SideNavPanel7
         Me.FP_CREDITOS.Symbol = ""

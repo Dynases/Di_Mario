@@ -670,12 +670,9 @@ Public Class P_Principal
 
     Private Sub btVentDescuento_Click(sender As Object, e As EventArgs) Handles btVentDescuento.Click
         Dim frm As New F0_ActualizaVentasDescuentos
-
         frm._nameButton = btVentDescuento.Name
         frm.Show()
     End Sub
-
-
 
     Private Sub Saldos_Producto_Click(sender As Object, e As EventArgs) Handles Saldos_Producto.Click
         _prCargarProductos()

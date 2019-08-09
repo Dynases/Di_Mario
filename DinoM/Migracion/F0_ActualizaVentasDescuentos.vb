@@ -40,7 +40,7 @@ Public Class F0_ActualizaVentasDescuentos
         tbFechaDesde.Value = Now.Date
         tbFechaHasta.Value = Now.Date
         _IniciarComponentes()
-        _prCargarTablaVentas()
+        '_prCargarTablaVentas()
 
 
 

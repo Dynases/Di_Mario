@@ -5,12 +5,14 @@ Imports DevComponents.DotNetBar.Metro
 Imports DevComponents.DotNetBar
 Imports Janus.Windows.GridEX
 Imports DevComponents.DotNetBar.Rendering
+Imports System.IO
 
 Public Class P_Principal
 
 
 #Region "Atributos"
-
+    Dim RutaGlobal As String = gs_CarpetaRaiz
+    Dim RutaTemporal As String = "C:\Temporal"
 #End Region
 
 #Region "Metodos Privados"
@@ -41,6 +43,7 @@ Public Class P_Principal
     End Sub
 
     Private Sub _prCargarProductos()
+
         Dim dt As New DataTable
         dt = L_fnStockActualPrincipal()
         grProductos.DataSource = dt
@@ -675,40 +678,162 @@ Public Class P_Principal
     End Sub
 
     Private Sub Saldos_Producto_Click(sender As Object, e As EventArgs) Handles Saldos_Producto.Click
+        TimerStock.Start()
+        _prCargarProductos()
+        grProductos.Focus()
+    End Sub
+
+    Private Sub btExcel_Click(sender As Object, e As EventArgs) Handles btExcel.Click
+        _prCrearCarpetaReportes()
+        Dim img As Bitmap = New Bitmap(My.Resources.checked, 50, 50)
+        If (P_ExportarExcel(RutaGlobal + "\Reporte\Reporte Productos")) Then
+            ToastNotification.Show(Me, "EXPORTACIÓN DE LISTA DE STOCK EXITOSA..!!!",
+                                   img, 2000,
+                                   eToastGlowColor.Green,
+                                   eToastPosition.BottomCenter)
+        Else
+            ToastNotification.Show(Me, "FALLO AL EXPORTACIÓN DE LISTA DE STOCK..!!!",
+                                   My.Resources.WARNING, 2000,
+                                   eToastGlowColor.Red,
+                                   eToastPosition.BottomLeft)
+        End If
+    End Sub
+
+    Public Function P_ExportarExcel(_ruta As String) As Boolean
+        Dim _ubicacion As String
+        'Dim _directorio As New FolderBrowserDialog
+
+        If (1 = 1) Then 'If(_directorio.ShowDialog = Windows.Forms.DialogResult.OK) Then
+            '_ubicacion = _directorio.SelectedPath
+            _ubicacion = _ruta
+            Try
+                Dim _stream As Stream
+                Dim _escritor As StreamWriter
+                Dim _fila As Integer = grProductos.GetRows.Length
+                Dim _columna As Integer = grProductos.RootTable.Columns.Count
+                Dim _archivo As String = _ubicacion & "\ListaDeProductos_" & Now.Date.Day &
+                    "." & Now.Date.Month & "." & Now.Date.Year & "_" & Now.Hour & "." & Now.Minute & "." & Now.Second & ".csv"
+                Dim _linea As String = ""
+                Dim _filadata = 0, columndata As Int32 = 0
+                File.Delete(_archivo)
+                _stream = File.OpenWrite(_archivo)
+                _escritor = New StreamWriter(_stream, System.Text.Encoding.UTF8)
+
+                For Each _col As GridEXColumn In grProductos.RootTable.Columns
+                    If (_col.Visible) Then
+                        _linea = _linea & _col.Caption & ";"
+                    End If
+                Next
+                _linea = Mid(CStr(_linea), 1, _linea.Length - 1)
+                _escritor.WriteLine(_linea)
+                _linea = Nothing
+
+                'Pbx_Precios.Visible = True
+                'Pbx_Precios.Minimum = 1
+                'Pbx_Precios.Maximum = Dgv_Precios.RowCount
+                'Pbx_Precios.Value = 1
+
+                For Each _fil As GridEXRow In grProductos.GetRows
+                    For Each _col As GridEXColumn In grProductos.RootTable.Columns
+                        If (_col.Visible) Then
+                            Dim data As String = CStr(_fil.Cells(_col.Key).Value)
+                            data = data.Replace(";", ",")
+                            _linea = _linea & data & ";"
+                        End If
+                    Next
+                    _linea = Mid(CStr(_linea), 1, _linea.Length - 1)
+                    _escritor.WriteLine(_linea)
+                    _linea = Nothing
+                    'Pbx_Precios.Value += 1
+                Next
+                _escritor.Close()
+                'Pbx_Precios.Visible = False
+                Try
+                    Dim ef = New Efecto
+                    ef._archivo = _archivo
+
+                    ef.tipo = 1
+                    ef.Context = "Su archivo ha sido Guardado en la ruta: " + _archivo + vbLf + "DESEA ABRIR EL ARCHIVO?"
+                    ef.Header = "PREGUNTA"
+                    ef.ShowDialog()
+                    Dim bandera As Boolean = False
+                    bandera = ef.band
+                    If (bandera = True) Then
+                        Process.Start(_archivo)
+                    End If
+
+                    'If (MessageBox.Show("Su archivo ha sido Guardado en la ruta: " + _archivo + vbLf + "DESEA ABRIR EL ARCHIVO?", "PREGUNTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes) Then
+                    '    Process.Start(_archivo)
+                    'End If
+                    Return True
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                    Return False
+                End Try
+            Catch ex As Exception
+                MsgBox(ex.Message)
+                Return False
+            End Try
+        End If
+        Return False
+    End Function
+    Private Sub _prCrearCarpetaReportes()
+        Dim rutaDestino As String = RutaGlobal + "\Reporte\Reporte Productos\"
+
+        If System.IO.Directory.Exists(RutaGlobal + "\Reporte\Reporte Productos\") = False Then
+            If System.IO.Directory.Exists(RutaGlobal + "\Reporte") = False Then
+                System.IO.Directory.CreateDirectory(RutaGlobal + "\Reporte")
+                If System.IO.Directory.Exists(RutaGlobal + "\Reporte\Reporte Productos") = False Then
+                    System.IO.Directory.CreateDirectory(RutaGlobal + "\Reporte\Reporte Productos")
+                End If
+            Else
+                If System.IO.Directory.Exists(RutaGlobal + "\Reporte\Reporte Productos") = False Then
+                    System.IO.Directory.CreateDirectory(RutaGlobal + "\Reporte\Reporte Productos")
+
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+        Dim _dt As DataTable = L_fnTodosAlmacenTodosLineas()
+        If (_dt.Rows.Count > 0) Then
+
+            If Not IsNothing(P_Global.Visualizador) Then
+                P_Global.Visualizador.Close()
+            End If
+
+            P_Global.Visualizador = New Visualizador
+
+            Dim objrep As New R_SaldosPorLinea
+            objrep.SetDataSource(_dt)
+            objrep.SetParameterValue("usuario", L_Usuario)
+            P_Global.Visualizador.CrGeneral.ReportSource = objrep 'Comentar
+            P_Global.Visualizador.Show() 'Comentar
+            P_Global.Visualizador.BringToFront() 'Comentar
+
+
+
+
+
+        Else
+            ToastNotification.Show(Me, "NO HAY DATOS PARA LOS PARAMETROS SELECCIONADOS..!!!",
+                                       My.Resources.INFORMATION, 2000,
+                                       eToastGlowColor.Blue,
+                                       eToastPosition.BottomLeft)
+
+        End If
+    End Sub
+
+    Private Sub TimerStock_Tick(sender As Object, e As EventArgs) Handles TimerStock.Tick
         _prCargarProductos()
     End Sub
 
+    Private Sub Saldos_Producto_PopupFinalized(sender As Object, e As EventArgs) Handles Saldos_Producto.PopupFinalized
 
+    End Sub
 
-    'Private Sub btnCredPagoCliente_Click(sender As Object, e As EventArgs) Handles btnCredPagoCliente.Click
-    '    SideNav1.IsMenuExpanded = False
-    '    Ventana.Select()
-    '    Dim frm As New F0_Cobrar_Cliente
-    '    frm._nameButton = btInvMovimiento.Name
-    '    frm._modulo = FP_CREDITOS
-    '    Dim tab3 As SuperTabItem = superTabControl3.CreateTab(frm.Text)
-    '    frm._tab = tab3
-    '    Dim panel As Panel = P_Global._fnCrearPanelVentanas(frm)
-    '    superTabControl3.SelectedTabIndex = superTabControl3.Tabs.Count - 1
-    '    tab3.AttachedControl.Controls.Add(panel)
-    '    frm.Show()
-    '    tab3.Text = frm.Text
-    '    tab3.Icon = frm.Icon
-    'End Sub
+    Private Sub SideNavPanel8_Leave(sender As Object, e As EventArgs) Handles SideNavPanel8.Leave
 
-    'Private Sub btnCredPagoClienteVendedor_Click(sender As Object, e As EventArgs) Handles btnCredPagoClienteVendedor.Click
-    '    SideNav1.IsMenuExpanded = False
-    '    Ventana.Select()
-    '    Dim frm As New F0_Cobrar_Vendedor
-    '    frm._nameButton = btInvMovimiento.Name
-    '    frm._modulo = FP_CREDITOS
-    '    Dim tab3 As SuperTabItem = superTabControl3.CreateTab(frm.Text)
-    '    frm._tab = tab3
-    '    Dim panel As Panel = P_Global._fnCrearPanelVentanas(frm)
-    '    superTabControl3.SelectedTabIndex = superTabControl3.Tabs.Count - 1
-    '    tab3.AttachedControl.Controls.Add(panel)
-    '    frm.Show()
-    '    tab3.Text = frm.Text
-    '    tab3.Icon = frm.Icon
-    'End Sub
+    End Sub
 End Class

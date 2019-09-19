@@ -678,7 +678,6 @@ Public Class P_Principal
     End Sub
 
     Private Sub Saldos_Producto_Click(sender As Object, e As EventArgs) Handles Saldos_Producto.Click
-        TimerStock.Start()
         _prCargarProductos()
         grProductos.Focus()
     End Sub
@@ -825,15 +824,7 @@ Public Class P_Principal
         End If
     End Sub
 
-    Private Sub TimerStock_Tick(sender As Object, e As EventArgs) Handles TimerStock.Tick
+    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         _prCargarProductos()
-    End Sub
-
-    Private Sub Saldos_Producto_PopupFinalized(sender As Object, e As EventArgs) Handles Saldos_Producto.PopupFinalized
-
-    End Sub
-
-    Private Sub SideNavPanel8_Leave(sender As Object, e As EventArgs) Handles SideNavPanel8.Leave
-
     End Sub
 End Class

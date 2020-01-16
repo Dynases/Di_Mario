@@ -147,6 +147,7 @@ Public Class F0_Ventas
     Private Sub _prInhabiliitar()
         SwProforma.IsReadOnly = True
         tbCodigo.ReadOnly = True
+        tbTaidcore.ReadOnly = True
         tbCliente.ReadOnly = True
         tbvendedores.ReadOnly = True
         tbObservacion.ReadOnly = True
@@ -187,6 +188,7 @@ Public Class F0_Ventas
         tbcodigovendedor.Enabled = False
         tbvendedores.ReadOnly = True
         tbnrocod.Enabled = False
+        tbTaidcore.Enabled = False
         tbCliente.ReadOnly = True
         tbObservacion.ReadOnly = True
         tbFechaVenta.Enabled = False
@@ -264,6 +266,7 @@ Public Class F0_Ventas
         End If
         tbProforma.Clear()
         tbCodigo.Clear()
+        tbTaidcore.Clear()
         tbCliente.Clear()
         tbnrocod.Clear()
         tbnrodoc.Clear()
@@ -310,7 +313,12 @@ Public Class F0_Ventas
                 tbnrodoc.Text = dt.Rows(0).Item("tanumi")
             End If
         End If
-
+        Dim dt1 As DataTable = L_fnListarNumiVentaTaidcore()
+        If (Not IsDBNull(dt1)) Then
+            If (dt1.Rows.Count > 0) Then
+                tbTaidcore.Text = dt1.Rows(0).Item("taidcore")
+            End If
+        End If
 
     End Sub
     Public Sub _prMostrarRegistro(_N As Integer)
@@ -336,6 +344,7 @@ Public Class F0_Ventas
             Dim FechaString As String = Str(fecha.Year)
             Dim subFecha As String = Microsoft.VisualBasic.Right(FechaString, 2)
             tbnrodoc.Text = .GetValue("tanumi").ToString + "-" + subFecha
+            tbTaidcore.Text = .GetValue("taidcore").ToString
 
             Dim proforma As Integer = IIf(IsDBNull(.GetValue("taproforma")), 0, .GetValue("taproforma"))
             If (proforma = 0) Then
@@ -612,13 +621,16 @@ Public Class F0_Ventas
             .Width = 100
             .Caption = "CODIGO"
             .Visible = False
-
         End With
         With grVentas.RootTable.Columns("codigo")
             .Width = 100
+            .Caption = "NRO. VENTA ORIGINAL"
+            .Visible = False
+        End With
+        With grVentas.RootTable.Columns("taidcore")
+            .Width = 100
             .Caption = "NRO. VENTA"
             .Visible = True
-
         End With
         With grVentas.RootTable.Columns("codcliente")
             .Width = 100

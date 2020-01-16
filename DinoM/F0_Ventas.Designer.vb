@@ -84,6 +84,7 @@ Partial Class F0_Ventas
         Me.LabelX9 = New DevComponents.DotNetBar.LabelX()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.tbTaidcore = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.PanelSuperior.SuspendLayout()
         Me.PanelInferior.SuspendLayout()
         CType(Me.BubbleBarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -293,8 +294,8 @@ Partial Class F0_Ventas
         Me.MSuperTabControl.SelectedTabIndex = 1
         Me.MSuperTabControl.Size = New System.Drawing.Size(1284, 530)
         Me.MSuperTabControl.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabItem1})
-        Me.MSuperTabControl.Controls.SetChildIndex(Me.MSuperTabControlPanel1, 0)
         Me.MSuperTabControl.Controls.SetChildIndex(Me.SuperTabControlPanel2, 0)
+        Me.MSuperTabControl.Controls.SetChildIndex(Me.MSuperTabControlPanel1, 0)
         '
         'PictureBox1
         '
@@ -478,6 +479,7 @@ Partial Class F0_Ventas
         '
         Me.Panel2.AutoScroll = True
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.tbTaidcore)
         Me.Panel2.Controls.Add(Me.tbcodigovendedor)
         Me.Panel2.Controls.Add(Me.tbnrocod)
         Me.Panel2.Controls.Add(Me.tbvendedores)
@@ -566,13 +568,14 @@ Partial Class F0_Ventas
         Me.tbnrodoc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbnrodoc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbnrodoc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbnrodoc.Location = New System.Drawing.Point(134, 10)
+        Me.tbnrodoc.Location = New System.Drawing.Point(203, 9)
         Me.tbnrodoc.Name = "tbnrodoc"
         Me.tbnrodoc.PreventEnterBeep = True
         Me.tbnrodoc.Size = New System.Drawing.Size(63, 22)
         Me.tbnrodoc.TabIndex = 242
         Me.tbnrodoc.TabStop = False
         Me.tbnrodoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.tbnrodoc.Visible = False
         '
         'SwProforma
         '
@@ -1170,7 +1173,7 @@ Partial Class F0_Ventas
         Me.tbCodigo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbCodigo.Location = New System.Drawing.Point(208, 11)
+        Me.tbCodigo.Location = New System.Drawing.Point(272, 10)
         Me.tbCodigo.Name = "tbCodigo"
         Me.tbCodigo.PreventEnterBeep = True
         Me.tbCodigo.Size = New System.Drawing.Size(63, 22)
@@ -1464,6 +1467,23 @@ Partial Class F0_Ventas
         '
         Me.PrintDialog1.UseEXDialog = True
         '
+        'tbTaidcore
+        '
+        '
+        '
+        '
+        Me.tbTaidcore.Border.Class = "TextBoxBorder"
+        Me.tbTaidcore.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbTaidcore.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbTaidcore.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.tbTaidcore.Location = New System.Drawing.Point(134, 9)
+        Me.tbTaidcore.Name = "tbTaidcore"
+        Me.tbTaidcore.PreventEnterBeep = True
+        Me.tbTaidcore.Size = New System.Drawing.Size(63, 22)
+        Me.tbTaidcore.TabIndex = 247
+        Me.tbTaidcore.TabStop = False
+        Me.tbTaidcore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'F0_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1581,4 +1601,5 @@ Partial Class F0_Ventas
     Friend WithEvents tbvendedores As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents tbcodigovendedor As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents tbnrocod As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents tbTaidcore As DevComponents.DotNetBar.Controls.TextBoxX
 End Class

@@ -2672,16 +2672,132 @@ salirIf:
                     'tbcodigovendedor.Focus()
                     grdetalle.Focus()
 
-                End If
-                'tbnrocod.Focus()
-                grdetalle.Focus()
+                    _prCargarTablaDeudas(_CodCliente)
 
-                Return
-            End If
+                End If
+        'tbnrocod.Focus()
+        grdetalle.Focus()
+
+        Return
+        End If
 
         End If
     End Sub
+    Private Sub _prCargarTablaDeudas(codCliente As String)
+        Dim dt As New DataTable
+        dt = L_fnDeudasCliente(codCliente)
 
+        If dt.Rows.Count > 0 Then
+
+            grDeudasCliente.DataSource = dt
+            grDeudasCliente.RetrieveStructure()
+            grDeudasCliente.AlternatingColors = True
+            With grDeudasCliente.RootTable.Columns("tcnumi")
+                .Width = 100
+                .Visible = False
+            End With
+            With grDeudasCliente.RootTable.Columns("sucursal")
+                .Width = 100
+                .Visible = False
+            End With
+            With grDeudasCliente.RootTable.Columns("tctv1numi")
+                .Width = 100
+                .Visible = False
+            End With
+            With grDeudasCliente.RootTable.Columns("tcty4clie")
+                .Width = 100
+                .Visible = False
+            End With
+            With grDeudasCliente.RootTable.Columns("tcty4vend")
+                .Width = 100
+                .Visible = False
+            End With
+            With grDeudasCliente.RootTable.Columns("ydcod")
+                .Width = 120
+                .Visible = False
+                .Caption = "CodCliente"
+            End With
+
+            With grDeudasCliente.RootTable.Columns("NroDoc")
+                .Caption = "Nro Doc"
+                .Width = 90
+                .TextAlignment = TextAlignment.Far
+                .Visible = True
+            End With
+            With grDeudasCliente.RootTable.Columns("factura")
+                .Caption = "Nro Factura"
+                .Width = 95
+                .TextAlignment = TextAlignment.Far
+                .Visible = False
+            End With
+            With grDeudasCliente.RootTable.Columns("cliente")
+                .Caption = "Cliente"
+                .Width = 350
+                .Visible = False
+            End With
+            With grDeudasCliente.RootTable.Columns("vendedor")
+                .Caption = "Vendedor"
+                .Width = 230
+                .Visible = False
+            End With
+
+            With grDeudasCliente.RootTable.Columns("tcfdoc")
+                .Caption = "Fecha"
+                .Width = 90
+                .FormatString = "dd/MM/yyyy"
+                .Visible = True
+            End With
+            With grDeudasCliente.RootTable.Columns("totalfactura")
+                .Caption = "Total"
+                .Width = 100
+                .MaxLength = 100
+                .FormatString = "0.00"
+                .TextAlignment = TextAlignment.Far
+                .Visible = True
+                .AggregateFunction = AggregateFunction.Sum
+            End With
+            With grDeudasCliente.RootTable.Columns("pendiente")
+                .Caption = "Pendiente Cobro"
+                .Width = 130
+                .TextAlignment = TextAlignment.Far
+                .FormatString = "0.00"
+                .MaxLength = 10
+                .Visible = True
+                .AggregateFunction = AggregateFunction.Sum
+            End With
+            With grDeudasCliente.RootTable.Columns("PagoAc")
+                .Caption = "Total Cobrado"
+                .Width = 120
+                .FormatString = "0.00"
+                .MaxLength = 10
+                .TextAlignment = TextAlignment.Far
+                .Visible = False
+            End With
+            With grDeudasCliente.RootTable.Columns("NumeroRecibo")
+                .Caption = "Nro Recibo"
+                .Width = 150
+                .MaxLength = 20
+                .Visible = False
+            End With
+            With grDeudasCliente
+                .GroupByBoxVisible = False
+                'diseño de la grilla
+                .VisualStyle = VisualStyle.Office2007
+                .DefaultFilterRowComparison = FilterConditionOperator.BeginsWith
+                .FilterMode = FilterMode.Automatic
+                .FilterRowUpdateMode = FilterRowUpdateMode.WhenValueChanges
+
+                .TotalRow = InheritableBoolean.True
+                .TotalRowFormatStyle.BackColor = Color.Gold
+                .TotalRowPosition = TotalRowPosition.BottomFixed
+            End With
+        Else
+            grDeudasCliente.ClearStructure()
+            Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
+            ToastNotification.Show(Me, "Este cliente no tiene deudas pendientes ".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.TopRight)
+
+        End If
+    End Sub
     Private Sub tbcodigovendedor_TextChanged_1(sender As Object, e As EventArgs) Handles tbcodigovendedor.TextChanged
         If (tbcodigovendedor.Text = String.Empty) Then
             _CodEmpleado = 0

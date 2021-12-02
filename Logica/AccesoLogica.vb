@@ -2790,6 +2790,18 @@ Public Class AccesoLogica
 
         Return _resultado
     End Function
+    Public Shared Function L_fnDeudasCliente(_numi As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 12))
+        _listParam.Add(New Datos.DParametro("@teuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@tenumi", _numi))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV00121Cheque", _listParam)
+
+        Return _Tabla
+    End Function
 #End Region
 
 #Region "PAGOS DE LAS COMPRAS CON CHEQUE"

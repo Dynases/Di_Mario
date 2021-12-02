@@ -34,6 +34,7 @@ Partial Class F0_Ventas
         Me.PanelContentSup = New System.Windows.Forms.Panel()
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.tbTaidcore = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.tbcodigovendedor = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.tbnrocod = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.tbvendedores = New DevComponents.DotNetBar.Controls.TextBoxX()
@@ -84,7 +85,9 @@ Partial Class F0_Ventas
         Me.LabelX9 = New DevComponents.DotNetBar.LabelX()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-        Me.tbTaidcore = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.gpDeudas = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.grDeudasCliente = New Janus.Windows.GridEX.GridEX()
         Me.PanelSuperior.SuspendLayout()
         Me.PanelInferior.SuspendLayout()
         CType(Me.BubbleBarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -125,6 +128,9 @@ Partial Class F0_Ventas
         CType(Me.tbMdesc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbtotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbPdesc, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gpDeudas.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.grDeudasCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelSuperior
@@ -153,7 +159,7 @@ Partial Class F0_Ventas
         '
         'PanelInferior
         '
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 602)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 642)
         Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelInferior.Size = New System.Drawing.Size(1284, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
@@ -220,7 +226,7 @@ Partial Class F0_Ventas
         'PanelPrincipal
         '
         Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1284, 641)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(1284, 681)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelSuperior, 0)
@@ -262,17 +268,17 @@ Partial Class F0_Ventas
         Me.PanelContent.Controls.Add(Me.PanelDetalle)
         Me.PanelContent.Controls.Add(Me.PanelContentSup)
         Me.PanelContent.Margin = New System.Windows.Forms.Padding(4)
-        Me.PanelContent.Size = New System.Drawing.Size(1251, 530)
+        Me.PanelContent.Size = New System.Drawing.Size(1251, 570)
         '
         'Panel1
         '
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Size = New System.Drawing.Size(1284, 530)
+        Me.Panel1.Size = New System.Drawing.Size(1284, 570)
         '
         'MSuperTabControlPanel1
         '
         Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(1251, 530)
+        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(1251, 570)
         '
         'MSuperTabControl
         '
@@ -292,7 +298,7 @@ Partial Class F0_Ventas
         Me.MSuperTabControl.Controls.Add(Me.SuperTabControlPanel2)
         Me.MSuperTabControl.Margin = New System.Windows.Forms.Padding(4)
         Me.MSuperTabControl.SelectedTabIndex = 1
-        Me.MSuperTabControl.Size = New System.Drawing.Size(1284, 530)
+        Me.MSuperTabControl.Size = New System.Drawing.Size(1284, 570)
         Me.MSuperTabControl.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabItem1})
         Me.MSuperTabControl.Controls.SetChildIndex(Me.SuperTabControlPanel2, 0)
         Me.MSuperTabControl.Controls.SetChildIndex(Me.MSuperTabControlPanel1, 0)
@@ -429,7 +435,7 @@ Partial Class F0_Ventas
         Me.PanelContentSup.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelContentSup.Location = New System.Drawing.Point(0, 0)
         Me.PanelContentSup.Name = "PanelContentSup"
-        Me.PanelContentSup.Size = New System.Drawing.Size(1251, 211)
+        Me.PanelContentSup.Size = New System.Drawing.Size(1251, 225)
         Me.PanelContentSup.TabIndex = 0
         '
         'GroupPanel1
@@ -443,7 +449,7 @@ Partial Class F0_Ventas
         Me.GroupPanel1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(1251, 211)
+        Me.GroupPanel1.Size = New System.Drawing.Size(1251, 225)
         '
         '
         '
@@ -479,6 +485,8 @@ Partial Class F0_Ventas
         '
         Me.Panel2.AutoScroll = True
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.GroupPanelFactura2)
+        Me.Panel2.Controls.Add(Me.gpDeudas)
         Me.Panel2.Controls.Add(Me.tbTaidcore)
         Me.Panel2.Controls.Add(Me.tbcodigovendedor)
         Me.Panel2.Controls.Add(Me.tbnrocod)
@@ -489,7 +497,6 @@ Partial Class F0_Ventas
         Me.Panel2.Controls.Add(Me.tbProforma)
         Me.Panel2.Controls.Add(Me.LabelX17)
         Me.Panel2.Controls.Add(Me.cbSucursal)
-        Me.Panel2.Controls.Add(Me.GroupPanelFactura2)
         Me.Panel2.Controls.Add(Me.lbTipoMoneda)
         Me.Panel2.Controls.Add(Me.swMoneda)
         Me.Panel2.Controls.Add(Me.lbCredito)
@@ -508,8 +515,25 @@ Partial Class F0_Ventas
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1245, 188)
+        Me.Panel2.Size = New System.Drawing.Size(1245, 202)
         Me.Panel2.TabIndex = 234
+        '
+        'tbTaidcore
+        '
+        '
+        '
+        '
+        Me.tbTaidcore.Border.Class = "TextBoxBorder"
+        Me.tbTaidcore.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbTaidcore.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbTaidcore.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.tbTaidcore.Location = New System.Drawing.Point(134, 9)
+        Me.tbTaidcore.Name = "tbTaidcore"
+        Me.tbTaidcore.PreventEnterBeep = True
+        Me.tbTaidcore.Size = New System.Drawing.Size(63, 22)
+        Me.tbTaidcore.TabIndex = 247
+        Me.tbTaidcore.TabStop = False
+        Me.tbTaidcore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbcodigovendedor
         '
@@ -675,9 +699,9 @@ Partial Class F0_Ventas
         Me.GroupPanelFactura2.Controls.Add(Me.LabelX7)
         Me.GroupPanelFactura2.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanelFactura2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GroupPanelFactura2.Location = New System.Drawing.Point(895, 0)
+        Me.GroupPanelFactura2.Location = New System.Drawing.Point(774, 0)
         Me.GroupPanelFactura2.Name = "GroupPanelFactura2"
-        Me.GroupPanelFactura2.Size = New System.Drawing.Size(350, 188)
+        Me.GroupPanelFactura2.Size = New System.Drawing.Size(150, 185)
         '
         '
         '
@@ -1187,9 +1211,9 @@ Partial Class F0_Ventas
         Me.PanelDetalle.BackColor = System.Drawing.Color.White
         Me.PanelDetalle.Controls.Add(Me.GroupPanel4)
         Me.PanelDetalle.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelDetalle.Location = New System.Drawing.Point(0, 211)
+        Me.PanelDetalle.Location = New System.Drawing.Point(0, 225)
         Me.PanelDetalle.Name = "PanelDetalle"
-        Me.PanelDetalle.Size = New System.Drawing.Size(1251, 319)
+        Me.PanelDetalle.Size = New System.Drawing.Size(1251, 345)
         Me.PanelDetalle.TabIndex = 1
         '
         'GroupPanel4
@@ -1203,7 +1227,7 @@ Partial Class F0_Ventas
         Me.GroupPanel4.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel4.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel4.Name = "GroupPanel4"
-        Me.GroupPanel4.Size = New System.Drawing.Size(1251, 319)
+        Me.GroupPanel4.Size = New System.Drawing.Size(1251, 345)
         '
         '
         '
@@ -1243,7 +1267,7 @@ Partial Class F0_Ventas
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1013, 296)
+        Me.Panel5.Size = New System.Drawing.Size(1013, 322)
         Me.Panel5.TabIndex = 0
         '
         'grdetalle
@@ -1256,7 +1280,7 @@ Partial Class F0_Ventas
         Me.grdetalle.Name = "grdetalle"
         Me.grdetalle.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grdetalle.Office2007CustomColor = System.Drawing.Color.DodgerBlue
-        Me.grdetalle.Size = New System.Drawing.Size(1013, 296)
+        Me.grdetalle.Size = New System.Drawing.Size(1013, 322)
         Me.grdetalle.TabIndex = 3
         Me.grdetalle.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -1276,7 +1300,7 @@ Partial Class F0_Ventas
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel4.Location = New System.Drawing.Point(1013, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(232, 296)
+        Me.Panel4.Size = New System.Drawing.Size(232, 322)
         Me.Panel4.TabIndex = 39
         '
         'LabelX13
@@ -1467,28 +1491,87 @@ Partial Class F0_Ventas
         '
         Me.PrintDialog1.UseEXDialog = True
         '
-        'tbTaidcore
+        'gpDeudas
+        '
+        Me.gpDeudas.CanvasColor = System.Drawing.SystemColors.Control
+        Me.gpDeudas.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.gpDeudas.Controls.Add(Me.Panel3)
+        Me.gpDeudas.DisabledBackColor = System.Drawing.Color.Empty
+        Me.gpDeudas.Dock = System.Windows.Forms.DockStyle.Right
+        Me.gpDeudas.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gpDeudas.Location = New System.Drawing.Point(924, 0)
+        Me.gpDeudas.Name = "gpDeudas"
+        Me.gpDeudas.Size = New System.Drawing.Size(430, 185)
         '
         '
         '
+        Me.gpDeudas.Style.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.gpDeudas.Style.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.gpDeudas.Style.BackColorGradientAngle = 90
+        Me.gpDeudas.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.gpDeudas.Style.BorderBottomWidth = 1
+        Me.gpDeudas.Style.BorderColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.gpDeudas.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.gpDeudas.Style.BorderLeftWidth = 1
+        Me.gpDeudas.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.gpDeudas.Style.BorderRightWidth = 1
+        Me.gpDeudas.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.gpDeudas.Style.BorderTopWidth = 1
+        Me.gpDeudas.Style.CornerDiameter = 4
+        Me.gpDeudas.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.gpDeudas.Style.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gpDeudas.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
+        Me.gpDeudas.Style.TextColor = System.Drawing.Color.White
+        Me.gpDeudas.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
         '
-        Me.tbTaidcore.Border.Class = "TextBoxBorder"
-        Me.tbTaidcore.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbTaidcore.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbTaidcore.ForeColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbTaidcore.Location = New System.Drawing.Point(134, 9)
-        Me.tbTaidcore.Name = "tbTaidcore"
-        Me.tbTaidcore.PreventEnterBeep = True
-        Me.tbTaidcore.Size = New System.Drawing.Size(63, 22)
-        Me.tbTaidcore.TabIndex = 247
-        Me.tbTaidcore.TabStop = False
-        Me.tbTaidcore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        '
+        Me.gpDeudas.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.gpDeudas.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.gpDeudas.TabIndex = 248
+        Me.gpDeudas.Text = "DEUDAS DEL CLIENTE"
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.grDeudasCliente)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(424, 162)
+        Me.Panel3.TabIndex = 0
+        '
+        'grDeudasCliente
+        '
+        Me.grDeudasCliente.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.[False]
+        Me.grDeudasCliente.BackColor = System.Drawing.Color.GhostWhite
+        Me.grDeudasCliente.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grDeudasCliente.EnterKeyBehavior = Janus.Windows.GridEX.EnterKeyBehavior.None
+        Me.grDeudasCliente.FocusStyle = Janus.Windows.GridEX.FocusStyle.Solid
+        Me.grDeudasCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.grDeudasCliente.GroupRowVisualStyle = Janus.Windows.GridEX.GroupRowVisualStyle.UseRowStyle
+        Me.grDeudasCliente.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.grDeudasCliente.HideSelection = Janus.Windows.GridEX.HideSelection.Highlight
+        Me.grDeudasCliente.Location = New System.Drawing.Point(0, 0)
+        Me.grDeudasCliente.Name = "grDeudasCliente"
+        Me.grDeudasCliente.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
+        Me.grDeudasCliente.Office2007CustomColor = System.Drawing.Color.DodgerBlue
+        Me.grDeudasCliente.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
+        Me.grDeudasCliente.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.grDeudasCliente.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
+        Me.grDeudasCliente.SelectOnExpand = False
+        Me.grDeudasCliente.Size = New System.Drawing.Size(424, 162)
+        Me.grDeudasCliente.TabIndex = 0
+        Me.grDeudasCliente.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
         'F0_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1284, 641)
+        Me.ClientSize = New System.Drawing.Size(1284, 681)
         Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F0_Ventas"
@@ -1538,6 +1621,9 @@ Partial Class F0_Ventas
         CType(Me.tbMdesc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbtotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbPdesc, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gpDeudas.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.grDeudasCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1602,4 +1688,7 @@ Partial Class F0_Ventas
     Friend WithEvents tbcodigovendedor As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents tbnrocod As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents tbTaidcore As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents gpDeudas As DevComponents.DotNetBar.Controls.GroupPanel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents grDeudasCliente As Janus.Windows.GridEX.GridEX
 End Class

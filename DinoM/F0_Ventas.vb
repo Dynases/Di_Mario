@@ -320,6 +320,7 @@ Public Class F0_Ventas
             End If
         End If
 
+        grDeudasCliente.ClearStructure()
     End Sub
     Public Sub _prMostrarRegistro(_N As Integer)
         '' grVentas.Row = _N
